@@ -1,0 +1,10 @@
+.invalid-url {
+    color:hsl(195, 3%, 26%);
+    font-size: 24px;
+    text-align: center;
+    margin: 25px 10px;
+}
+
+.dark-invalid-url {
+    color:hsl(194, 17%, 85%);
+} 
