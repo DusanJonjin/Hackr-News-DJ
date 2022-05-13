@@ -5,6 +5,8 @@ import { Text } from './Text';
 import { Title } from './Title';
 import { User } from './User';
 import { TimeAgo } from './TimeAgo';
+import { StoryComments } from './StoryComments';
+import { NoUrl } from './NoUrl';
 
 export { 
     CommentsCount,
@@ -14,4 +16,5 @@ export {
     TimeAgo,
     Title,
     User,
+    NoUrl
 };

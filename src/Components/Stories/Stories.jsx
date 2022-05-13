@@ -3,6 +3,7 @@ import { StoriesList } from './StoriesList';
 import { StoriesPaginate } from './StoriesPaginate';
 import { StoriesStoryComments } from './StoriesStoryComments';
 import { FakeStoriesList } from '../- Placeholders -/FakeStoriesList';
+import { NoUrl } from '../- Shared -/NoUrl';
 import { getStoriesIDs } from '../../API/ApiCalls';
 import { usePreventSetStateOnUnmount } from '../../Hooks/PreventSetStateOnUnmount';
 import { Routes, Route, useLocation } from 'react-router';
@@ -93,7 +94,7 @@ export function Stories({ storiesApiName }) {
                                 path={pageNum === 1 ? `/itemId=:StoryId` : `/page_:PageNum/itemId=:StoryId`}
                                 element={<StoriesStoryComments />}
                             />
-                            <Route path='*' element={<h2>Invalid URL!</h2>} />
+                            <Route path='*' element={<NoUrl />} />
                         </Routes>
                 }[status]
             }

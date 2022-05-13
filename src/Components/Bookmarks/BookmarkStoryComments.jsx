@@ -1,6 +1,7 @@
 import React from 'react';
 import { StoryComments } from '../- Shared -/StoryComments';
 import { useItemIdAndTheme } from '../../Hooks/UseItemdAndTheme';
+import { themedClass } from '../../Utilities/helperFunctions';
 import { useReadLocalSetNewValuesOnUnmount } from '../../Hooks/UseReadLocalSetNewValuesOnUnmount';
 
 export function BookmarkStoryComments() {
@@ -11,7 +12,7 @@ export function BookmarkStoryComments() {
 
     const bMarkedItemArr = useReadLocalSetNewValuesOnUnmount(itemId);
 
-    if (!bMarkedItemArr) return <p className='url-no-match'>Bookmark doesn't exist!</p>
+    if (!bMarkedItemArr) return <h2 className={themedClass('invalid-url', dark)}>Bookmark doesn't exist!</h2>
 
     const id = itemId.slice(itemId.indexOf('-') + 1);
 

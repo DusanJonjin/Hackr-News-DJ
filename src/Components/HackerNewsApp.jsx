@@ -3,6 +3,7 @@ import { Header } from './Header/Header';
 import { Stories } from './Stories/Stories';
 import { Comments } from './Comments/Comments';
 import { Bookmarks } from './Bookmarks/Bookmarks';
+import { NoUrl } from './- Shared -/NoUrl';
 import { pathsAndApis } from '../Utilities/variousData';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { themedClass } from '../Utilities/helperFunctions';
@@ -35,10 +36,7 @@ export function HackerNewsApp() {
                     , [])}
                     <Route path='/comments/*' element={<Comments />} />
                     <Route path='/bookmarks/*' element={<Bookmarks />} />
-                    <Route 
-                        path='*' 
-                        element={<p className='url-no-match'> No match for this URL!</p>}
-                    />
+                    <Route path='*' element={<NoUrl />} />
                 </Routes>
             </main>
             <footer className={themedClass('app-footer', dark)}>

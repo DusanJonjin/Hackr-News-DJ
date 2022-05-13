@@ -10,11 +10,17 @@
 .modern-story-comments-wrap,
 .modern-comments {
     max-width: 1400px;
+    background-color: hsl(194, 100%, 84%);
 }
 
 .dark-story-comments-wrap,
 .dark-comments {
     background-color: hsl(240, 19%, 11%);
+}
+
+.dark-story-comments-wrap.modern-story-comments-wrap,
+.dark-comments.modern-comments {
+    background-color: var(--dark-story-top-color);
 }
 
 .details-comments-wrap {
