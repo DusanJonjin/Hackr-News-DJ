@@ -1,0 +1,47 @@
+.stories-ol, .fake-stories-ul {
+    max-width: var(--classic-main-width);
+    margin: 0 auto;
+    padding: 10px 5px;
+    background: var(--classic-main-background);
+    list-style-type: none;
+    transition: var(--main-transition);
+}
+
+.modern-stories-ol, 
+.modern-fake-stories-ul {
+    max-width: 1500px;
+    margin: 1.5em auto 0 auto;
+    padding: 0;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 650px));
+    column-gap: 1.3em;
+    row-gap: 1em;
+    justify-content: center;
+}
+
+.dark-stories-ol,
+.dark-fake-stories-ul {
+    background: hsl(240, 19%, 11%);
+}
+
+.modern-fake-stories-ul.dark-fake-stories-ul {
+    background: transparent;
+}
+
+.modern-stories-ol.dark-stories-ol {
+    background: transparent;
+}
+
+.stories-li {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1340px) {
+    
+    .modern-stories-ol, 
+    .modern-fake-stories-ul {
+        row-gap: 1.3em;
+    }
+}

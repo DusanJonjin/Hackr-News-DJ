@@ -1,0 +1,49 @@
+import React from 'react';
+import { Header } from './Header/Header';
+import { Stories } from './Stories/Stories';
+import { Comments } from './Comments/Comments';
+import { Bookmarks } from './Bookmarks/Bookmarks';
+import { pathsAndApis } from '../Utilities/variousData';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { themedClass } from '../Utilities/helperFunctions';
+import { useScrollToTop } from '../Hooks/ScrollToTop';
+import { useSelector } from 'react-redux';
+import '../Styles/HackerNewsApp.css';
+
+export function HackerNewsApp() {
+
+    const { dark } = useSelector(state => state.theme);
+
+    useScrollToTop();
+
+    return (
+        <div className={themedClass('app-wrapper', dark)}>
+            <Header />
+            <main>
+                <Routes>
+                   <Route path='/' element={<Navigate replace to='/top' />} />
+                    {pathsAndApis.reduce((acc, { path, api }, i) => 
+                        !path.includes('comments') && !path.includes('bookmarks') ?
+                            [
+                                ...acc,
+                                <Route 
+                                    key={i} path={`${path}/*`} 
+                                    element={<Stories key={api} storiesApiName={api} />} 
+                                />
+                            ]
+                        : acc
+                    , [])}
+                    <Route path='/comments/*' element={<Comments />} />
+                    <Route path='/bookmarks/*' element={<Bookmarks />} />
+                    <Route 
+                        path='*' 
+                        element={<p className='url-no-match'> No match for this URL!</p>}
+                    />
+                </Routes>
+            </main>
+            <footer className={themedClass('app-footer', dark)}>
+                © {new Date().getFullYear()}. Hackr News App by D.J.
+            </footer>      
+        </div>
+    )
+}

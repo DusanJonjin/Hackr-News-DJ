@@ -1,0 +1,43 @@
+.bookmarked-items {
+    padding: .2em 0;
+}
+
+.modern-bookmarked-items {
+    max-width: 650px;
+}
+
+.bookmarked-items > h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: hsl(210, 5%, 25%);
+    margin: 0 0 0 .2em;
+    text-decoration: underline;
+}
+
+.dark-bookmarked-items > h1 {
+    color: hsl(240, 3%, 82%)
+}
+
+.modern-bookmarked-items > h1 {
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.dark-bookmarked-items.modern-bookmarked-items > h1 {
+    color: hsl(240, 3%, 84%)
+}
+
+.bookmarked-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 670px) {
+    .modern-bookmarked-items > h1 {
+        font-size: 19px;
+    }
+}

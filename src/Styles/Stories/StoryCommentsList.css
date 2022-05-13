@@ -1,0 +1,32 @@
+.story-comments-ul,
+.comments-ol {
+    padding: 15px 0 10px 0;
+    margin: 0;
+    transition: var(--main-transition);
+}
+
+.modern-story-comments-ul,
+.modern-comments-ol {
+    padding: 0 0 10px 0;
+    background-color: hsl(194, 100%, 84%);
+}
+
+.dark-story-comments-ul.modern-story-comments-ul,
+.dark-comments-ol.modern-comments-ol {
+    background-color: var(--dark-story-top-color);
+}
+
+.story-comments-li,
+.comments-li {
+    list-style: none;
+    margin: 0 6px; 
+    padding: 0;
+}
+
+@media only screen and (min-width: 670px) {
+
+    .story-comments-li,
+    .comments-li {
+        margin: 0 10px;
+    }
+}

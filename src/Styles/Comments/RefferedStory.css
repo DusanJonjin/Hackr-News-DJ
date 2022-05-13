@@ -1,0 +1,35 @@
+.story-comment-top-wrap > h2 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    transition: var(--main-transition);
+}
+
+.modern-story-comment-top-wrap > h2 {
+    font-size: 16px;
+}
+
+.story-comment-top-wrap > .fake-title {
+    width: 450px;
+    max-width: 95%;
+    height: 1.47em;
+    background-color: rgb(178, 210, 238);
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+
+.dark-story-comment-top-wrap > .fake-title {
+    background-color: var(--dark-story-top-color);
+}
+
+.modern-story-comment-top-wrap.dark-story-comment-top-wrap > .fake-title {
+    background-color: hsl(212, 35%, 25%);
+}
+
+
+@media only screen and (min-width: 460px) {
+
+    .story-comment-top-wrap > .fake-title {
+        max-width: 100%;
+    }
+}

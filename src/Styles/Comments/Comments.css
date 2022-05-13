@@ -1,0 +1,12 @@
+.comments {
+    padding-bottom: 1.5em;
+    transition: var(--main-transition);
+}
+
+.modern-comments { 
+    background-color: rgb(174, 236, 255);
+}
+
+.modern-comments.dark-comments {
+    background-color: var(--dark-story-top-color);
+}

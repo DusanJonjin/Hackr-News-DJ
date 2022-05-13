@@ -1,0 +1,48 @@
+.story-bm-star-wrap {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.modern-story-bm-star-wrap {
+    width: 16px;
+    height: 16px;
+    padding: 5px 0 0 0;
+}
+
+.story-bookmark-star {
+    font-size: 22px;
+    position: absolute;
+    top: -67%;
+    left: 0%;
+    color: hsl(231, 71%, 47%);
+    user-select: none;
+}
+
+.modern-story-bookmark-star {
+    font-size: 23px;
+    top: -65%
+}
+
+.dark-story-bookmark-star {
+    color: hsl(212, 100%, 83%);
+}
+
+@media only screen and (min-width: 670px) {
+    .story-bm-star-wrap {
+        width: 16px;
+        height: 16px;
+    }
+
+    .story-bookmark-star {
+        font-size: 23px;
+        top: -55%;
+        left: 0%
+    }
+
+    .modern-story-bookmark-star {
+        font-size: 23px;
+        top: -63%
+    }
+}

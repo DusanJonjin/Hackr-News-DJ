@@ -1,0 +1,127 @@
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    top: 100%;
+    right: calc(50% - 140px);
+    padding-bottom: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .2s ease;
+    transform: translate3d(0, -100%, -1px);
+    z-index: -2;
+}
+
+.navbar-open {
+    transform: translate3d(0, 0, -1px);
+    transition: .3s ease;
+}
+
+.navbar > ul {
+    margin: 0;
+    padding: 5px 0 15px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    background-color: rgb(255, 123, 71);
+}
+
+.navbar.dark-navbar > ul {
+    background-color: rgb(27, 27, 40);
+}
+
+.nav-li {
+    font-size: 16px; 
+    text-transform: lowercase;
+    margin: 1em auto 1em 1.2em; 
+    position: relative;
+    text-align: left;
+    letter-spacing: .07em;
+}
+
+.nav-li::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color:hsl(14, 93%, 18%);
+    right: 0;
+    bottom: -80%;  
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.dark-nav-li::after{
+    background-color: hsl(22, 100%, 85%);
+}
+
+.selected-nav-li {
+    pointer-events: none;
+}
+
+.selected-nav-li::after { 
+    width: 100%;
+    left: 0;
+    bottom: -25%;
+    opacity: 1;
+}
+
+.nav-link {
+    color:hsl(13, 88%, 5%);
+    position: relative;
+    padding: 0 5px;
+    text-decoration: none;
+    transition: .0s ease;
+}
+
+.nav-link:hover{
+    color: hsl(55, 87%, 88%);
+}
+
+.dark-nav-link {
+    color: hsl(22, 100%, 88%);
+}
+
+.bookmark-star {
+    position: absolute;
+    top: -2px;
+    right: -10px;
+}
+
+
+@media only screen and (min-width: 1340px) {
+    .navbar {
+        position: static;
+        width: auto;
+        height: auto;
+        padding-bottom: 0;
+        justify-content: space-around;
+        overflow: initial;
+        transform: none;
+        transition: .0s ease;
+    }
+
+    .navbar.dark-navbar > ul {
+        background-color: hsl(240, 20%, 18%);
+    }
+
+    .navbar > ul {
+        background-color: hsl(17, 100%, 60%);
+        width: auto;
+        padding: 3px 0 3px 0;
+        flex-direction: row;
+    }
+
+    .nav-li {
+        font-size: 15px; 
+        margin: 0 1.2em 0 1.2em;
+        text-align: center;       
+    }
+
+    .nav-link > img {
+        margin-left: 4px;
+    }
+}

@@ -1,0 +1,88 @@
+.comment-bmark-details {
+    font-family: 'Open Sans', sans-serif;
+    background-color:hsl(194, 100%, 90%);
+    padding: 1em .5em 0 1em;
+}
+
+.modern-comment-bmark-details {
+    background-color: hsl(194, 100%, 84%);
+}
+
+.dark-comment-bmark-details {
+    background-color: hsl(240, 21%, 13%);
+}
+
+.dark-comment-bmark-details.modern-comment-bmark-details {
+    background-color: var(--dark-story-top-color);
+}
+
+.comment-bmark-details > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color:hsl(210, 6%, 45%);
+    display: inline;
+    margin: 0 .3em 0 0;
+}
+
+.dark-comment-bmark-details > p {
+    color:hsl(210, 6%, 60%);
+}
+
+.modern-comment-bmark-details > p {
+    color:hsl(210, 6%, 45%);
+}
+
+.dark-comment-bmark-details.modern-comment-bmark-details > p {
+    color:hsl(210, 6%, 56%);
+}
+
+.comment-bmark-details > p:first-child {
+    font-size: 15px;
+    font-weight: bold;
+    color:hsl(210, 6%, 35%);
+}
+
+.dark-comment-bmark-details > p:first-child {
+    color:hsl(210, 6%, 82%);
+}
+
+.modern-comment-bmark-details > p:first-child {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: .03em;
+    text-decoration: underline;
+}
+
+.dark-comment-bmark-details.modern-comment-bmark-details > p:first-child {
+    color:hsl(210, 6%, 87%);
+
+}
+.comment-bmark-details strong {
+    font-family: 'Open Sans', sans-serif;
+    color:hsl(210, 6%, 52%);
+}
+
+.dark-comment-bmark-details strong {
+    color:hsl(210, 6%, 67%);
+}
+
+.modern-comment-bmark-details strong {
+    color:hsl(210, 6%, 42%);
+}
+
+.dark-comment-bmark-details.modern-comment-bmark-details strong {
+    color:hsl(210, 6%, 72%);
+}
+
+@media only screen and (min-width: 670px) {
+
+    .modern-comment-bmark-details > p {
+        font-size: 15px;
+    }
+
+    .modern-comment-bmark-details > p:first-child {
+        font-size: 16px;
+    }
+
+}

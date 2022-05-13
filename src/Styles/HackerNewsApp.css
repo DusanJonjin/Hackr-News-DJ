@@ -1,0 +1,50 @@
+:root {
+    --classic-main-width: 1550px;
+    --classic-main-background: hsl(199, 100%, 94%);
+    --dark-story-top-color: hsl(240, 17%, 18%);
+    --story-text-color: hsl(240, 4%, 26%);
+    --dark-story-text-color: hsl(240, 2%, 79%);
+    --modern-story-background: hsl(197, 100%, 85%);
+    --modern-story-dark-bground: hsl(240, 21%, 13.5%);
+    --fake-top-color: rgb(143, 190, 235);
+    --main-transition: .0s ease;
+}
+
+body {
+    margin: 0;
+}
+
+.app-wrapper {
+    background-color: rgb(243, 243, 244);
+    transition: var(--main-transition);
+    min-height: 100vh;
+}
+
+.dark-app-wrapper {
+    background-color: hsl(240, 22%, 10%);
+}
+
+main {
+    margin: 0;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.url-no-match {
+    font-size: 24px;
+    text-align: center;
+    margin: 25px 10px;
+}
+
+.app-footer {
+    font-family: 'Roboto', sans-serif;;
+    text-align: center;
+    padding: 2em 0 3em 0;
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(100, 100, 103);
+    transition: var(--main-transition);
+}
+
+.dark-app-footer {
+    color: rgb(170, 170, 173)
+}

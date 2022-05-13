@@ -1,0 +1,20 @@
+.bookmarks {
+    background-color: var( --classic-main-background);
+    max-width: var(--classic-main-width);
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.dark-bookmarks {
+    background-color: hsl(240, 19%, 11%);;
+}
+
+.modern-bookmarks { 
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 670px) {
+    .modern-bookmarks {
+        max-width: 1400px;
+    }
+}

@@ -1,0 +1,81 @@
+.fake-comment {
+    width: 98%;
+    height: 135px;
+    position: relative;
+    margin: 0 0 10px 0;
+    border-radius: 7px;
+    transition: var(--main-transition);
+}
+
+.modern-fake-comment {
+    width: 99%;
+    height: 145px;
+    background-color:rgb(236, 249, 255);
+    border: 1px solid rgb(236, 249, 255);
+}
+
+.modern-fake-comment.dark-fake-comment {
+    background-color: rgb(20, 20, 31);
+    border: 1px solid rgb(20, 20, 31);
+}
+
+.fake-comment::before, .fake-comment::after {
+    content: '';
+    position: absolute;
+    transition: var(--main-transition);
+}
+
+.fake-comment::before {
+    top: 7%;
+    left: 1%;
+    width: 300px;
+    max-width: 85%;
+    height: 20%;
+    background-color: rgb(206, 222, 235);
+    border-radius: 7px;
+}
+
+.modern-fake-comment::before {
+    top: 10%;
+    width: 370px;
+    background-color: rgb(196, 212, 226);
+}
+
+.dark-fake-comment::before {
+    background-color: rgb(47, 56, 68);
+}
+
+.fake-comment::after {
+    bottom: 5%;
+    left: 1%;
+    width: 98%;
+    height: 60%;
+    background-color: rgb(195, 206, 218);
+    border-radius: 7px;
+}
+
+.modern-fake-comment::after {
+    bottom: 10%;
+    width: 97%;
+    height: 50%;
+    background-color: rgb(196, 206, 214);
+}
+
+.dark-fake-comment::after {
+    background-color: rgb(68, 82, 95);
+}
+
+@media only screen and (min-width: 670px) {
+
+    .fake-comment {
+        width: 90%;
+        height: 120px;
+    }
+
+    .modern-fake-comment {
+        width: 99.4%;
+        height: 140px;
+        margin: 0 auto 10px auto;
+        position: relative;
+    }
+}

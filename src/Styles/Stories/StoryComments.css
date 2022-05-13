@@ -1,0 +1,275 @@
+.story-comments-wrap,
+.comments {
+    max-width: var(--classic-main-width);
+    margin: 0 auto;
+    padding: 0;
+    background: var(--classic-main-background);
+    transition: var(--main-transition);
+}
+
+.modern-story-comments-wrap,
+.modern-comments {
+    max-width: 1400px;
+}
+
+.dark-story-comments-wrap,
+.dark-comments {
+    background-color: hsl(240, 19%, 11%);
+}
+
+.details-comments-wrap {
+    font-family: 'Open-sans', sans-serif;
+    transition: var(--main-transition);
+}
+
+.fake-comments-count {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    transition: var(--main-transition);
+}
+
+.modern-fake-comments-count {
+    background-color: rgb(174, 236, 255);
+}
+
+.dark-fake-comments-count.modern-fake-comments-count {
+    background-color: var(--dark-story-top-color);
+}
+
+.fake-comments-count::before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 125px;
+    background-color: rgb(182, 211, 219);
+    top: 30%;
+    left: 10px;
+    border-radius: 25px;
+    transition: var(--main-transition);
+}
+
+.modern-fake-comments-count::before {
+    width: 45%;
+    top: 25%;
+    left: 28%;
+}
+
+.dark-fake-comments-count::before {
+    background-color: rgb(45, 55, 65);
+}
+
+.count-search-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    max-width: 100%;
+}
+
+.modern-count-search-wrap {
+    background-color: rgb(174, 236, 255);
+    width: 100%;
+    justify-content: space-around;
+}
+
+.dark-count-search-wrap.modern-count-search-wrap {
+    background-color: var(--dark-story-top-color);
+}
+
+.count-search-wrap > .details-comm-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(65, 93, 119);
+    margin: 0;
+    padding: 10px 15px 5px 15px;
+    text-decoration: underline;
+    pointer-events: none;
+    transition: var(--main-transition);
+}
+
+.modern-count-search-wrap > .details-comm-count {
+    font-size: 17px;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    background-color: rgb(174, 236, 255);
+}
+
+.dark-count-search-wrap > .details-comm-count {
+    color:rgb(165, 174, 185);
+    background-color: transparent;
+}
+
+.dark-count-search-wrap.modern-count-search-wrap > .details-comm-count {
+    background-color: var(--dark-story-top-color);
+}
+
+.count-search-wrap > input {
+    font-size: 13px;
+    padding-left:27px;
+    background-color: rgb(248, 253, 255);
+    background-image: url('../Images/search-icon-black.png');
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 3px 4px;
+    height: 1.9em;
+    width: 23ch;
+    border: 1px solid rgb(179, 189, 201);
+    border-radius: 3px;
+}
+
+.count-search-wrap > input:focus {
+    color:hsl(246, 96%, 18%);
+    background-color: white;
+    box-shadow: 0 0 2px 1px rgb(38, 125, 247);
+    outline: none;
+}
+
+.dark-count-search-wrap > input {
+    color: hsl(0, 0%, 88%);
+    background-color: hsl(240, 20%, 18%);
+    background-image: url('../Images/search-icon-white.png');
+    border: 1px solid hsl(211, 9%, 52%);
+}
+
+.dark-count-search-wrap > input:focus {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(240, 20%, 21%);
+    box-shadow: 0 0 2px 1px hsl(212, 100%, 79%);
+}
+
+.modern-count-search-wrap > input {
+    font-size: 15px;
+    height: 1.7em;
+    width: 20ch;
+    border: 1px solid hsl(213, 16%, 65%);
+    border-radius: 10px;
+}
+
+.modern-count-search-wrap > input:focus {
+    color:hsl(243, 22%, 18%);
+}
+
+.dark-count-search-wrap.modern-count-search-wrap > input {
+    color: hsl(0, 0%, 90%);
+    background-color: hsl(240, 20%, 14%);
+}
+
+.dark-count-search-wrap.modern-count-search-wrap > input:focus {
+    color: hsl(0, 0%, 97%);
+    background-color: hsl(240, 20%, 15%);
+    box-shadow: 0 0 2px 1px hsl(212, 100%, 82%);
+    border: 1px solid hsl(213, 16%, 60%);
+}
+
+.details-comments-text {
+    font-size: 15px;
+    color: hsl(240, 2%, 44%);
+    background: hsl(194, 100%, 90%);
+    padding: 0 15px;
+    overflow-x: auto;
+    word-break: break-word;
+    transition: var(--main-transition);
+}
+
+.modern-details-comments-text {
+    color: hsl(240, 2%, 46%);
+    background: hsl(194, 100%, 88%);
+    padding: 5px 17px;
+}
+
+.dark-details-comments-text {
+    background-color: hsl(240, 21%, 13%);
+    color: hsl(240, 3%, 67%);
+}
+
+.modern-details-comments-text.dark-details-comments-text {
+    background-color: hsl(240, 19%, 12%);
+}
+
+.modern-details-comments-text.dct-bmark {
+    background-color: hsl(194, 100%, 84%);
+    color: hsl(240, 2%, 37%);
+}
+
+.dark-details-comments-text.modern-details-comments-text.dct-bmark {
+    background-color: var(--dark-story-top-color);
+    color: hsl(240, 2%, 83%);
+}
+
+@media only screen and (min-width: 670px) {
+
+    .fake-comments-count {
+        height: 35px;
+        width: 100%;
+    }
+
+    .modern-fake-comments-count {
+        height: 57px;
+        width: 100%;
+    }
+
+    .fake-comments-count::before {
+        top: 15%;
+        left: 20px;
+    }
+
+    .modern-fake-comments-count::before {
+        height: 23px;
+        width: 20%;
+        top: 30%;
+        left: 40%;
+    }
+
+    .count-search-wrap > .details-comm-count {
+        font-size: 16px;
+        padding: 15px 15px 10px 20px;
+    }
+
+    .count-search-wrap {
+        width: 360px;
+    }
+
+    .modern-count-search-wrap {
+        width: 100%;
+    }
+
+    .count-search-wrap > input {
+        font-size: 14px;
+        width: 22ch;
+        border: 1px solid hsl(211, 9%, 52%);
+        border-radius: 3px;
+    }
+
+    .modern-count-search-wrap > input {
+        font-size: 16px;
+        width: 21ch;
+        border: 1px solid hsl(213, 16%, 63%);
+        border-radius: 11px;
+    }
+
+
+    .modern-count-search-wrap > .details-comm-count {
+        font-size: 19px;
+        padding: 18px 15px;
+    }
+    
+    .details-comments-text {
+        padding: 5px 20px;
+    }
+
+    .details-comments-text.dct-bmark {
+        padding: 0 15px 7px 15px;
+    }
+
+    .modern-details-comments-text {
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .modern-fake-story-comm-details {
+        height: 130px;
+    }
+}
