@@ -74,6 +74,7 @@ export function StoryComments({ fromBookmark=false, bMarkedItemArr=[], itemId, d
                                 <StoryCommentsList 
                                     commentsIDs={item.kids}
                                     itemKey={itemKey}
+                                    storyId={item.id}
                                     dark={dark}
                                     modern={modern}
                                     fromBookmark={fromBookmark}

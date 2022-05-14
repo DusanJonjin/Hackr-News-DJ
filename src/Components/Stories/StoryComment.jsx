@@ -8,7 +8,7 @@ import { getRepliesCount, collapseExpandComment } from '../../Store/actions';
 import { themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Stories/StoryComment.css';
 
-export function StoryComment({ commentID }) {
+export function StoryComment({ commentID, storyId }) {
 
     const dispatch = useDispatch();
 
@@ -81,13 +81,21 @@ export function StoryComment({ commentID }) {
                     {commentIsExpanded &&
                         <div className={themedClass('story-comment-bot-wrap', dark, modern)}>
                             <Text text={parentUser.concat(' ', item.text)} />
+                            <a 
+                                href={`https://news.ycombinator.com/reply?id=${item.id}&goto=item%3Fid%3D${storyId}%23${item.id}`}
+                                target='_blank'
+                                className='reply-link'
+                                style={{textDecoration: 'underline'}}
+                            >
+                                reply
+                            </a>
                         </div>
                     }
                 </>
             }
             {commentIsExpanded ? 
                 item.kids && item.kids.map(kidID => 
-                    <StoryComment key={kidID} commentID={kidID} />) 
+                    <StoryComment key={kidID} commentID={kidID} storyId={storyId} />) 
                 : null
             }
             </article>

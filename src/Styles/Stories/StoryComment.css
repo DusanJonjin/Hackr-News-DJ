@@ -82,7 +82,7 @@
 }
 
 .dark-comment-bookmark-star {
-    color: hsl(212, 100%, 40%);
+    color: hsl(212, 73%, 71%);
 }
 
 .modern-story-comment-top-wrap .user {
@@ -130,7 +130,7 @@
 
 .story-comment-bot-wrap > p {
     margin: 0;
-    padding: 0 0 12px 0;
+    padding: 0 0;
 }
 
 .story-comment-bot-wrap > p * {
@@ -154,6 +154,23 @@
 .reply-to {
     font-style: italic;
     color: hsl(199, 8%, 54%);
+}
+
+.story-comment-bot-wrap .reply-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    color: hsl(0, 33%, 56%);
+    margin: 6px 0 10px 0;
+}
+
+.dark-story-comment-bot-wrap .reply-link {
+    color:hsl(6, 100%, 82%);
+}
+
+.modern-story-comment-bot-wrap .reply-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
 }
 
 .comment-exp-collapse {
@@ -200,6 +217,14 @@
 
     .story-comment-bot-wrap > p {
         margin: 0;
-        padding: 0 0 15px 0;
+        
+    }
+
+    .story-comment-bot-wrap .reply-link {
+        font-size: 14px;
+    }
+
+    .modern-story-comment-bot-wrap .reply-link {
+        font-size: 15px;
     }
 }

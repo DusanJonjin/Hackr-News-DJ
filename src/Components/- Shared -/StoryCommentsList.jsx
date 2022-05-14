@@ -3,7 +3,7 @@ import { StoryOrBmarkComm } from './StoryOrBmarkComm';
 import { themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Stories/StoryCommentsList.css';
 
-export function StoryCommentsList({ commentsIDs, itemKey, dark, modern, fromBookmark }) {
+export function StoryCommentsList({ commentsIDs, itemKey, storyId, dark, modern, fromBookmark }) {
 
     return (
         <ul className={themedClass('story-comments-ul', dark, modern)}>
@@ -13,6 +13,7 @@ export function StoryCommentsList({ commentsIDs, itemKey, dark, modern, fromBook
                         fromBookmark={fromBookmark} 
                         commentID={commentID} 
                         itemKey={itemKey}
+                        storyId={storyId}
                     />
                 </li>
             )}

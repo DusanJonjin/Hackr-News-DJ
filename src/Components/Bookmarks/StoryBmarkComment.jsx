@@ -40,6 +40,8 @@ export function StoryBmarkComment({ commentID, itemKey }) {
 
     const isSearched = item.by.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
 
+    const storyId = bMarkedStoryArr[0].id;
+
     return (
         status && status === 'isLoaded' 
         ?   <article className={themedClass('story-comment', dark, modern)}>
@@ -62,6 +64,13 @@ export function StoryBmarkComment({ commentID, itemKey }) {
                     {commentIsExpanded &&
                         <div className={themedClass('story-comment-bot-wrap', dark, modern)}>
                             <Text text={parentUser.concat(' ', item.text)} />
+                            <a 
+                                href={`https://news.ycombinator.com/reply?id=${item.id}&goto=item%3Fid%3D${storyId}%23${item.id}`}
+                                target='_blank'
+                                className='reply-link'
+                            >
+                                reply
+                            </a>
                         </div>
                     }
                 </>
