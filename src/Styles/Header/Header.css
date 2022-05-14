@@ -24,13 +24,17 @@
     margin-left: .5em;
 }
 
-#logo-wrapper > img {
+.home-link {
+    text-decoration: none;
+}
+
+#logo-wrapper img {
     max-width: 25px;
     display: block;
     margin-right: 7px;
 }
 
-#logo-wrapper > h1 {
+#logo-wrapper h1 {
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;

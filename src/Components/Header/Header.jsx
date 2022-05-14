@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { themedClass } from '../../Utilities/helperFunctions';
 import { pathsAndApis } from '../../Utilities/variousData';
+import { Link } from 'react-router-dom';
 import '../../Styles/Header/Header.css';
 
 export function Header() {
@@ -42,13 +43,15 @@ export function Header() {
     const isSubPage = pathname.includes('item');
 
     return (
-        <header className={themedClass('app-header', dark)}>
-            <div id='logo-wrapper'>
-                <img src={'/Images/hn-logo.png'}
-                     alt='hacker-news-custom-logo'
-                />
-                <h1>Hackr News App</h1>
-            </div>
+        <header className={themedClass('app-header', dark)}>  
+            <Link to='/top' className='home-link'>     
+                <div id='logo-wrapper'>
+                        <img src={'/Images/hn-logo.png'}
+                            alt='hacker-news-custom-logo'
+                        />
+                        <h1>Hackr News App</h1>
+                </div>
+            </Link> 
             <div className='current-page-wrapper'>
                 <h2 
                     className={`${themedClass('current-page', dark)} ${navMenu ? 'curr-page-nav-open' : ''} ${isSubPage ? 'sub-page' : ''}`} 
