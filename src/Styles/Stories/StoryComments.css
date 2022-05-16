@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 315px;
     max-width: 100%;
 }
 
@@ -114,7 +114,7 @@
 
 .count-search-wrap > input {
     font-size: 13px;
-    padding-left:27px;
+    padding-left: 27px;
     background-color: rgb(248, 253, 255);
     background-image: url('../Images/search-icon-black.png');
     background-repeat: no-repeat;
@@ -149,9 +149,10 @@
 .modern-count-search-wrap > input {
     font-size: 15px;
     height: 1.7em;
-    width: 20ch;
-    border: 1px solid hsl(213, 16%, 65%);
-    border-radius: 10px;
+    width: 19ch;
+    background-position: 4px 4px;
+    border: 1px solid hsl(213, 16%, 60%);
+    border-radius: 15px;
 }
 
 .modern-count-search-wrap > input:focus {
@@ -235,7 +236,7 @@
     }
 
     .count-search-wrap {
-        width: 360px;
+        width: 365px;
     }
 
     .modern-count-search-wrap {
@@ -244,16 +245,18 @@
 
     .count-search-wrap > input {
         font-size: 14px;
-        width: 22ch;
+        width: 21ch;
         border: 1px solid hsl(211, 9%, 52%);
         border-radius: 3px;
     }
 
     .modern-count-search-wrap > input {
         font-size: 16px;
-        width: 21ch;
-        border: 1px solid hsl(213, 16%, 63%);
-        border-radius: 11px;
+        background-position: 5px 4px;
+        width: 20ch;
+        padding-left: 29px;
+        border: 1px solid hsl(213, 16%, 57%);
+        border-radius: 15px;
     }
 
 
