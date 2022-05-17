@@ -33,7 +33,7 @@ export function Comment({ itemID }) {
                     <TimeAgo time={item.time}/>&nbsp;on:&nbsp;
                     <ReferredStory parent={item.parent} />
                 </div>
-                <div className={themedClass('story-comment-bot-wrap', dark, modern)}>
+                <div className={`${themedClass('story-comment-bot-wrap', dark, modern)} fresh`}>
                     <Text text={item.text} />
                 </div>
             </article>

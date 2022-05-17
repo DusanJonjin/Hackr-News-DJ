@@ -173,6 +173,10 @@
     font-size: 14px;
 }
 
+.fresh {
+    padding: 0 0 12px 0;
+}
+
 .comment-exp-collapse {
     cursor: pointer;
     color: rgb(252, 76, 53);
