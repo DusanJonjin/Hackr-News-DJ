@@ -22,10 +22,6 @@ export function StoriesPaginate(props) {
 
     const midBtnsCount = midBtns.length;
 
-    const handleFirstPageSelect = () => {
-        handleMidBtns(Array.from({length: midBtnsCount}, (_ ,i) => i + 2));
-    };
-
     const handleLastPageSelect = () => {
         handleMidBtns(
             Array.from(
@@ -73,7 +69,6 @@ export function StoriesPaginate(props) {
                 <>
                     <Link 
                         to='..'
-                        onClick={handleFirstPageSelect}
                         className={`pagin-numbers ${pageNum === firstPage ? 'pagin-num-selected' : ''}`}
                     >
                         {firstPage}
