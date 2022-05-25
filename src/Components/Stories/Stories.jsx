@@ -47,7 +47,7 @@ export function Stories({ storiesApiName }) {
         getStoriesIDs(storiesApiName, abortSignal, pageNum, storiesPerPage).then(res => 
             isMounted.current && (
                 setStoriesObj(res),
-                pageNum === 1 &&
+                (pageNum === 1 || paginateMidBtns.length < 1) &&
                 setPaginateMidBtns(initialMidBtns(res.count, pageNum))
             )
         ); 
