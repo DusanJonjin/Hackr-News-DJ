@@ -21,8 +21,8 @@
 }
 
 .modern-story.dark-story {
-    border: 1px solid rgb(27, 27, 41);
-    background: hsl(240, 21%, 14%);
+    border: 1px solid hsl(240, 21%, 13%);
+    background: hsl(240, 21%, 15%);
 }
 
 .story-num {
@@ -86,20 +86,20 @@ two classes are active together: */
 
 .title-link {
    text-decoration: none;
-   color: hsl(231, 99%, 33%);
+   color: hsl(231, 48%, 36%);
    transition: var(--main-transition);
 }
 
 .title-link:hover {
-    color: hsl(231, 100%, 57%);
+    color: hsl(231, 42%, 52%);
 }
 
 .dark-title-link {
-    color: hsl(212, 100%, 75%);
+    color: hsl(212, 74%, 77%);
 }
 
 .dark-title-link:hover {
-    color: hsl(212, 100%, 60%);
+    color: hsl(212, 74%, 65%);
 }
 
 .story-top-wrap > .domain {
@@ -223,7 +223,7 @@ two classes are active together: */
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p {
-    background: hsl(240, 16%, 21%);
+    background: hsl(240, 14%, 23%);
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p:last-child {
