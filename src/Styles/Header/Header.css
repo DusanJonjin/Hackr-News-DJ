@@ -158,14 +158,14 @@
     }
 
     .app-header #logo-wrapper > h1 {
-        font-size: 19px;
+        font-size: 18px;
         font-family: 'Oswald', sans-serif;
         letter-spacing: .04em;
     }
 
     #logo-wrapper > img {
-        max-width: 32px;
-        max-height: 32px;
+        max-width: 30px;
+        max-height: 30px;
         margin-right: 8px;
     }
 
