@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-const themeReducer = (state={dark: true, modern: false}, action) => {
+const themeReducer = (state={dark: false, modern: false}, action) => {
     switch (action.type) {
         case 'TOGGLE_DARK_THEME': 
             const changedDarkTheme = {...state, dark: !state.dark};

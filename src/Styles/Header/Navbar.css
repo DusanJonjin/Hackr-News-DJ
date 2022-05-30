@@ -65,7 +65,7 @@
 .selected-nav-li::after { 
     width: 100%;
     left: 0;
-    bottom: -25%;
+    bottom: -19%;
     opacity: 1;
 }
 
