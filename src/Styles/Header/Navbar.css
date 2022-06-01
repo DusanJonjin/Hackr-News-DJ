@@ -47,7 +47,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color:hsl(14, 93%, 18%);
+    background-color:hsl(14, 95%, 15%);
     right: 0;
     bottom: -80%;  
     opacity: 0;
@@ -70,7 +70,8 @@
 }
 
 .nav-link {
-    color:hsl(13, 88%, 5%);
+    font-weight: bold;
+    color:hsl(11, 76%, 10%);
     position: relative;
     padding: 0 5px;
     text-decoration: none;
