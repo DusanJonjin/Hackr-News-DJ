@@ -46,9 +46,7 @@ export function Header() {
         <header className={themedClass('app-header', dark)}>  
             <Link to='/top' className='home-link'>     
                 <div id='logo-wrapper'>
-                        <img src={'/Images/hn-logo.png'}
-                            alt='hacker-news-custom-logo'
-                        />
+                        <img src={'/Images/hn-logo.png'} alt='hacker-news-custom-logo' />
                         <h1>Hackr News App</h1>
                 </div>
             </Link> 

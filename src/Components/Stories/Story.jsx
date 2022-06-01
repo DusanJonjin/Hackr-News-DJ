@@ -69,7 +69,7 @@ export function Story({ storyID, storyNum }) {
                     >
                         <CommentsCount linkDisabled={linkDisabled}>
                             {!item.descendants ? '0' : item.descendants}
-                            <img src={`/Images/comment${dark ? '-white' : ''}.png`} />
+                            <img src={`/Images/comment${dark ? '-white' : ''}.png`} alt='comment-baloon' />
                         </CommentsCount>
 
                     </Link>                   

@@ -8,7 +8,7 @@ export function Title({ storyUrl, title, dark }) {
     return (
         <h2>
             <a 
-                href={storyUrl} 
+                href={`${storyUrl}`} 
                 target='_blank' 
                 rel='noopener noreferrer'
                 className={themedClass('title-link', dark)}

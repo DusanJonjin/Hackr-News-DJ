@@ -172,6 +172,7 @@ two classes are active together: */
 
 .story-bottom-wrap p:last-child > img {
     width: 15px;
+    height: 15px;
     vertical-align: -19%;
     margin-left: 3px;
     transition: var(--main-transition);
@@ -217,6 +218,7 @@ two classes are active together: */
 
 .modern-story-bottom-wrap p:last-child > img {
     width: 16px;
+    height: 16px;
     vertical-align: -19%;
     margin-left: 3px;
     transition: var(--main-transition);
