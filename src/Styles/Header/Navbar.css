@@ -70,8 +70,8 @@
 }
 
 .nav-link {
-    font-weight: bold;
-    color:hsl(11, 76%, 10%);
+    font-weight: 500;
+    color:hsl(11, 76%, 8%);
     position: relative;
     padding: 0 5px;
     text-decoration: none;
