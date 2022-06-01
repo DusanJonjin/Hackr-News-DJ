@@ -5,22 +5,10 @@ import { StoriesStoryComments } from './StoriesStoryComments';
 import { FakeStoriesList } from '../- Placeholders -/FakeStoriesList';
 import { NoUrl } from '../- Shared -/NoUrl';
 import { getStoriesIDs } from '../../API/ApiCalls';
+import { initializeMidBtns } from '../../Utilities/helperFunctions';
 import { usePreventSetStateOnUnmount } from '../../Hooks/PreventSetStateOnUnmount';
 import { Routes, Route, useLocation } from 'react-router';
 import '../../Styles/Stories/Stories.css';
-
-
-const initialMidBtns = (storiesCount, storiesPerPage, pageNum) => {
-    const pagesCount = Math.ceil(storiesCount / storiesPerPage);
-    if (pagesCount < 8) return Array.from({length: pagesCount}, (_, i) => i + 1);
-    const midBtnsCount = 5;
-    const initialBtns = Array.from({length: midBtnsCount}, (_, i) => {
-        if (pageNum <= midBtnsCount) return (i + 2);
-        if (pageNum >= pagesCount - (midBtnsCount - 1)) return (i + (pagesCount - midBtnsCount));
-        return (i + (pageNum - 2));
-    })
-    return initialBtns;
-}
 
 export function Stories({ storiesApiName }) {
 
@@ -49,7 +37,7 @@ export function Stories({ storiesApiName }) {
             isMounted.current && (
                 setStoriesObj(res),
                 (pageNum === 1 || paginateMidBtns.length < 1) &&
-                setPaginateMidBtns(initialMidBtns(res.count, storiesPerPage, pageNum))
+                setPaginateMidBtns(initializeMidBtns(res.count, storiesPerPage, pageNum))
             )
         ); 
         window.scrollTo(0, 0);

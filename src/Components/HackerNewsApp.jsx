@@ -1,8 +1,8 @@
 import React, {Suspense, lazy} from 'react';
 import { Header } from './Header/Header';
 import { Stories } from './Stories/Stories';
-/*import { Comments } from './Comments/Comments';
-import { Bookmarks } from './Bookmarks/Bookmarks';*/
+import { Comments } from './Comments/Comments';
+import { Bookmarks } from './Bookmarks/Bookmarks';
 import { NoUrl } from './- Shared -/NoUrl';
 import { pathsAndApis } from '../Utilities/variousData';
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -10,9 +10,6 @@ import { themedClass } from '../Utilities/helperFunctions';
 import { useScrollToTop } from '../Hooks/ScrollToTop';
 import { useSelector } from 'react-redux';
 import '../Styles/HackerNewsApp.css';
-
-const Comments = lazy(() => import('./Comments/Comments'));
-const Bookmarks = lazy(() => import('./Bookmarks/Bookmarks'));
 
 export function HackerNewsApp() {
 
@@ -24,7 +21,6 @@ export function HackerNewsApp() {
         <div className={themedClass('app-wrapper', dark)}>
             <Header />
             <main>
-            <Suspense fallback={<div>Loading</div>}>
                 <Routes>
                    <Route path='/' element={<Navigate replace to='/top' />} />
                     {pathsAndApis.reduce((acc, { path, api }, i) => 
@@ -42,7 +38,6 @@ export function HackerNewsApp() {
                     <Route path='/bookmarks/*' element={<Bookmarks />} />
                     <Route path='*' element={<NoUrl />} />
                 </Routes>
-            </Suspense>
             </main>
             <footer className={themedClass('app-footer', dark)}>
                 © {new Date().getFullYear()}. Hackr News App by D.J.

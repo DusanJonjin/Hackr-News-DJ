@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Bookmarks/Bookmarks.css'
 
-export default function Bookmarks() {
+export function Bookmarks() {
 
     const { dark, modern } = useSelector(state => state.theme);
 

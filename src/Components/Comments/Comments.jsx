@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router';
 import '../../Styles/Comments/Comments.css';
 
-export default function Comments() {
+export function Comments() {
 
     const { dark, modern } = useSelector(state => state.theme);
 

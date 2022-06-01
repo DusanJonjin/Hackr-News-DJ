@@ -3,8 +3,7 @@ export const getDomainFromUrl = url => {
     if (!url) return 'news.ycombinator.com';
     //Match the values between http(s) and the first next slash(/)
     const longUrl = url.match(/https:\/\/(.*?)\/|http:\/\/(.*?)\//);
-    /*If match is null, url is short, and we need to slice out
-    'http(s)://' from it: */
+    //If match is null, url is short - we need to slice out 'http(s)://' from it:
     if (!longUrl) {
         if (url.includes('https://')) {
             return url.slice(8);
@@ -31,18 +30,28 @@ export const calculateTimeAgo = storyTime => {
     const minutesAgo = (secondsAgo / 60).toFixed();
     const hoursAgo = (secondsAgo / 3600).toFixed();
     const daysAgo = (secondsAgo / (3600 * 24)).toFixed();
-
     const singularOrNot = (timeAgo, timeUnit) => {
         const singular = timeAgo + ` ${timeUnit} ago`;
         const plural = timeAgo + ` ${timeUnit}s ago`;
         return timeAgo < 2 ? singular : plural;
     }
-
     if (secondsAgo < 60) return singularOrNot(secondsAgo, 'second');
     if (minutesAgo < 60) return singularOrNot(minutesAgo, 'minute');
     if (hoursAgo < 24) return singularOrNot(hoursAgo, 'hour');
     else return singularOrNot(daysAgo, 'day');
 };
+
+export const initializeMidBtns = (storiesCount, storiesPerPage, pageNum) => {
+    const pagesCount = Math.ceil(storiesCount / storiesPerPage);
+    if (pagesCount < 8) return Array.from({length: pagesCount}, (_, i) => i + 1);
+    const midBtnsCount = 5;
+    const initialBtns = Array.from({length: midBtnsCount}, (_, i) => {
+        if (pageNum <= midBtnsCount) return (i + 2);
+        if (pageNum >= pagesCount - (midBtnsCount - 1)) return (i + (pagesCount - midBtnsCount));
+        return (i + (pageNum - 2));
+    })
+    return initialBtns;
+}
 
 export const themedClass = (className, dark=false, modern=false) => {
     const darkTheme = dark ? `dark-${className}` : '';
