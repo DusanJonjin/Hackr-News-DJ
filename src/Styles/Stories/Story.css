@@ -21,7 +21,7 @@
 }
 
 .modern-story.dark-story {
-    border: 1px solid hsl(240, 21%, 13%);
+    border: 1px solid hsl(240, 21%, 14%);
     background: hsl(240, 21%, 15%);
 }
 
@@ -95,7 +95,7 @@ two classes are active together: */
 }
 
 .dark-title-link {
-    color: hsl(212, 74%, 77%);
+    color: hsl(212, 74%, 78%);
 }
 
 .dark-title-link:hover {
