@@ -37,6 +37,8 @@ export function Story({ storyID, storyNum }) {
         pathname: `../itemId=${item.id}` 
     }
 
+    const storyUrl = item.url ? item.url : `https://news.ycombinator.com/item?id=${item.id}`
+
     const domain = getDomainFromUrl(item.url);
 
     const linkDisabled = !item.descendants && !item.text;
@@ -49,7 +51,7 @@ export function Story({ storyID, storyNum }) {
                 </p>
                 <div className={themedClass('story-top-wrap', dark, modern)}>
                     <Title 
-                        storyUrl={item.url}
+                        storyUrl={storyUrl}
                         title={item.title}
                         dark={dark}
                     />
