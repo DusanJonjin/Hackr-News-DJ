@@ -29,7 +29,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: bold;
-    color: hsl(7, 12%, 15%);
+    color: hsl(8, 15%, 19%);
     border-radius: 5px;
     width: 4.5em;
     padding: .3em 0;
@@ -46,7 +46,8 @@
 }
 
 .theme-selection-wrap > .btn-selected {
-    color: hsl(9, 87%, 6%);
+    color: hsl(22, 100%, 90%);
+    font-weight: 500;
     background-color: transparent;
     text-decoration: underline;
     pointer-events: none;

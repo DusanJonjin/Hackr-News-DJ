@@ -47,7 +47,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color:hsl(14, 95%, 15%);
+    background-color: hsl(22, 100%, 88%);
     right: 0;
     bottom: -80%;  
     opacity: 0;
@@ -71,7 +71,7 @@
 
 .nav-link {
     font-weight: 500;
-    color:hsl(11, 76%, 8%);
+    color: hsl(22, 100%, 92%);
     position: relative;
     padding: 0 5px;
     text-decoration: none;
@@ -79,7 +79,7 @@
 }
 
 .nav-link:hover{
-    color: hsl(55, 87%, 88%);
+    color: hsl(55, 87%, 92%);
 }
 
 .dark-nav-link {
