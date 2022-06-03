@@ -55,7 +55,7 @@ export function Header() {
                     className={`${themedClass('current-page', dark)} ${navMenu ? 'curr-page-nav-open' : ''} ${isSubPage ? 'sub-page' : ''}`} 
                     onClick={() => toggleNavMenu()}
                 >
-                    <img src={`/Images/triangle-arrow${dark ? '-dark' : ''}.png`} alt='arrow-icon' /> {currentPage}
+                    <img src={`/Images/triangle-arrow-dark.png`} alt='arrow-icon' /> {currentPage}
                 </h2>
             </div>
             <Navbar 

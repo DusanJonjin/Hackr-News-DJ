@@ -57,7 +57,7 @@
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    color:hsl(13, 89%, 15%);
+    color: hsl(22, 100%, 93%);
     margin: 0;
     padding: 3px 0;
     cursor: pointer;
@@ -95,7 +95,7 @@
 .hamburger::before {
     width: 32px;
     height: 3px;
-    background-color: rgb(51, 12, 3);
+    background-color: hsl(22, 100%, 91%);
     transition: .2s ease;
     border-radius: 7px;
 }
@@ -103,7 +103,7 @@
 .dark-hamburger,
 .dark-hamburger::after,
 .dark-hamburger::before {
-    background-color: rgb(255, 204, 175);
+    background-color: hsl(22, 100%, 85%);
 }
 
 .hamburger {
