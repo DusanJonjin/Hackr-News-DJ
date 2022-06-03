@@ -5,7 +5,7 @@ import { useGetAndDisplayComment } from '../../Hooks/UseGetAndDisplayComment';
 import { useBookmarkTheItem } from '../../Hooks/UseBookmarkTheItem';
 import { useDispatch } from 'react-redux';
 import { getRepliesCount, collapseExpandComment } from '../../Store/actions';
-import { themedClass } from '../../Utilities/helperFunctions';
+import { getBookmarkedItems, themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Stories/StoryComment.css';
 
 export function StoryComment({ commentID, storyId }) {
@@ -20,24 +20,6 @@ export function StoryComment({ commentID, storyId }) {
         searchValue,
         commentIsExpanded, 
     } = useGetAndDisplayComment(dispatch, commentID);
-
-    const getBookmarkedItems = (state, bookmark) => {
-        if (state.comments.some(comment => comment.item.id === bookmark.id)) { 
-            const getAllItems = (commentID, accum) => {
-                const count = state.comments.reduce((acc, comment) => {
-                    const { item } = comment;
-                    if (!item || item.dead || item.deleted) return acc; 
-                    if (!acc.length && item.type === 'story') return [item, ...acc];
-                    if (acc.length < 2 && item.id === bookmark.id) return [...acc, item];
-                    if (item.parent === commentID) return getAllItems(item.id, [...acc, item])
-                    return acc
-                }, accum);
-                return count;
-            }
-            const allItems = getAllItems(commentID, []);
-            return allItems;
-        }
-    };
 
     const { isBookmarked, toggleBookmark } = useBookmarkTheItem(commentID, 'comment', getBookmarkedItems);
 

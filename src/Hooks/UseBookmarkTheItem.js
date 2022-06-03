@@ -11,7 +11,7 @@ export function useBookmarkTheItem(id, type, getBookmarkedItems) {
 
     const [isBookmarked, setIsBookmarked] = useState(localStorage.getItem(key) ? true : false);
 
-    const bookmarkedItems = useSelector(state => getBookmarkedItems(state, bookmark));
+    const bookmarkedItems = useSelector(state => getBookmarkedItems(state, bookmark, id));
 
     const toggleBookmark = id => {
         setBookmark(prevBookmark => ({id: id, toggle: !prevBookmark.toggle}))
