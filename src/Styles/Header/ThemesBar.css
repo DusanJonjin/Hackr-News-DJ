@@ -33,7 +33,7 @@
     border-radius: 5px;
     width: 4.5em;
     padding: .3em 0;
-    background-color: hsl(17, 100%, 82%);
+    background-color: hsl(17, 100%, 85%);
     border: none;
     cursor: pointer;
     transition: var(--main-transition);
@@ -46,7 +46,7 @@
 }
 
 .theme-selection-wrap > .btn-selected {
-    color: hsl(22, 100%, 95%);
+    color: hsl(22, 100%, 97%);
     font-weight: 500;
     background-color: transparent;
     text-decoration: underline;

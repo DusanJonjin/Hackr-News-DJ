@@ -1,4 +1,4 @@
-import React, {Suspense, lazy} from 'react';
+import React from 'react';
 import { Header } from './Header/Header';
 import { Stories } from './Stories/Stories';
 import { Comments } from './Comments/Comments';
