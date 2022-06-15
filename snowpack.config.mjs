@@ -6,7 +6,13 @@ export default {
     src: '/dist',
   },
   plugins: [
-    '@snowpack/plugin-react-refresh'
+    '@snowpack/plugin-react-refresh',
+    [
+        '@snowpack/plugin-webpack',
+        {
+
+        },
+    ],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
