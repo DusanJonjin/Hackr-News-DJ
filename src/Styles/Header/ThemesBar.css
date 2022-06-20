@@ -63,7 +63,7 @@
     margin-top: 5px;
     background-color: rgb(30, 30, 30);
     border-radius: 12px;
-    background-image: url(/Images/moon.png);
+    background-image: url('../../Background\ Images/moon.png');
     background-repeat: no-repeat;
     background-position: 15%;
     background-size: 16px 16px;
@@ -87,7 +87,7 @@
 
 .dark-theme-dark-bar {
     background-color: rgb(68, 165, 255);
-    background-image: url(/Images/sun.png);
+    background-image: url('../../Background\ Images/sun.png');
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: 20px 20px;

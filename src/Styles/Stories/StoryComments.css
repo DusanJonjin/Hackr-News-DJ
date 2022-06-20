@@ -116,7 +116,7 @@
     font-size: 13px;
     padding-left: 27px;
     background-color: rgb(248, 253, 255);
-    background-image: url('../Images/search-icon-black.png');
+    background-image: url('../../Background\ Images/search-icon-black.png');
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: 3px 4px;
@@ -136,7 +136,7 @@
 .dark-count-search-wrap > input {
     color: hsl(0, 0%, 88%);
     background-color: hsl(240, 20%, 18%);
-    background-image: url('../Images/search-icon-white.png');
+    background-image: url('../../Background\ Images/search-icon-white.png');
     border: 1px solid hsl(211, 9%, 52%);
 }
 
