@@ -164,7 +164,7 @@ two classes are active together: */
 
 .story-bottom-wrap p:last-child {
     font-weight: bold;
-    color: hsl(12, 80%, 57%);
+    color: hsl(3, 53%, 58%);
     border: none;
     cursor: pointer;
     transition: var(--main-transition);
