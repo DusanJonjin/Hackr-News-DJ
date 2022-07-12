@@ -1,10 +1,10 @@
 :root {
     --classic-main-width: 1550px;
-    --classic-main-background: hsl(198, 35%, 93%);
+    --classic-main-background: hsl(200, 27%, 93.5%);
     --dark-story-top-color: hsl(240, 16%, 20%);
     --story-text-color: hsl(240, 4%, 26%);
     --dark-story-text-color: hsl(240, 2%, 79%);
-    --modern-story-background: hsl(197, 100%, 85%);
+    --modern-story-background: hsl(198, 100%, 86%);
     --modern-story-dark-bground: hsl(240, 21%, 13.5%);
     --fake-top-color: rgb(143, 190, 235);
     --main-transition: .0s ease;

@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect ,useRef } from 'react';
 import { User, TimeAgo, Text }  from '../- Shared -/AllSharedComponents';
 import { FakeComment } from '../- Placeholders -/FakeComment';
+import { StoryCommentOptions } from '../- Shared -/StoryCommentOptions';
 import { useGetAndDisplayComment } from '../../Hooks/UseGetAndDisplayComment';
 import { useDispatch } from 'react-redux';
-import { getRepliesCount, collapseExpandComment } from '../../Store/actions';
+import { getScrolledCommentID } from '../../Store/actions';
 import { themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Stories/StoryComment.css';
 
-export function StoryBmarkComment({ commentID, itemKey }) {
+export function StoryBmarkComment({ commentID, itemKey, goToComment }) {
 
     const dispatch = useDispatch();
+
+    const commentRef = useRef(null);
 
     const { 
         dark, 
         modern, 
         commentToDisplay, 
+        isScrolledComment,
         parentUser,
         searchValue,
         commentIsExpanded, 
@@ -32,6 +36,15 @@ export function StoryBmarkComment({ commentID, itemKey }) {
 
     const isNew = checkIfIsNew();
 
+    useEffect(() => {
+        if (isScrolledComment) {
+            commentRef.current && commentRef.current.scrollIntoView({
+                behavior: "smooth"
+            });
+            setTimeout(() => dispatch(getScrolledCommentID(0)), 750)
+        } 
+    }, [isScrolledComment])
+
     if (!commentToDisplay) return <FakeComment />;
 
     const { status, item, repliesCount } = commentToDisplay;
@@ -42,23 +55,26 @@ export function StoryBmarkComment({ commentID, itemKey }) {
 
     const storyId = bMarkedStoryArr[0].id;
 
+    const { nestLevel, next } = goToComment;
+
     return (
         status && status === 'isLoaded' 
-        ?   <article className={themedClass('story-comment', dark, modern)}>
+        ?   <article className={themedClass('story-comment', dark, modern)} ref={commentRef}>
             {isSearched &&
                 <>
-                    <div className={themedClass('story-comment-top-wrap', dark, modern)}>
+                    <div className={`${themedClass('story-comment-top-wrap', dark, modern)} ${isScrolledComment ? 'is-scrolled' : ''}`}>
                         <User user={item.by} />&nbsp;
                         <TimeAgo time={item.time}/>&ensp;
-                        <p 
-                            className={themedClass('comment-exp-collapse', dark, modern)}
-                            onClick={() => (
-                                !repliesCount && dispatch(getRepliesCount(commentID)),
-                                dispatch(collapseExpandComment(commentID))
-                            )}
-                        >
-                        {commentIsExpanded ? `[ - ]` : `[ ${repliesCount} more ]`}
-                        </p>
+                        <StoryCommentOptions 
+                            commentID={commentID}
+                            dark={dark}
+                            modern={modern}
+                            dispatch={dispatch}
+                            themedClass={themedClass}
+                            repliesCount={repliesCount}
+                            commentIsExpanded={commentIsExpanded}
+                            goToComment={goToComment}
+                        />
                         {isNew && <p className='new-comm'>NEW</p>}
                     </div> 
                     {commentIsExpanded &&
@@ -75,9 +91,21 @@ export function StoryBmarkComment({ commentID, itemKey }) {
                     }
                 </>
             }
-            {commentIsExpanded ? 
-                item.kids && item.kids.map(kidID => 
-                    <StoryBmarkComment key={kidID} commentID={kidID} itemKey={itemKey} />) 
+          {commentIsExpanded ? 
+                item.kids && item.kids.map((kidID, i, arr) => 
+                    <StoryBmarkComment 
+                        key={kidID} 
+                        commentID={kidID} 
+                        itemKey={itemKey}
+                        goToComment={{
+                            ...goToComment,
+                            nestLevel: nestLevel + 1,
+                            parent: commentID,
+                            prev: arr[i - 1] ? arr[i - 1] : 0,
+                            next: arr[i + 1] ? arr[i + 1] : next
+                        }}
+                    />
+                ) 
                 : null
             }
             </article>

@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { User, TimeAgo, Text }  from '../- Shared -/AllSharedComponents';
 import { FakeComment } from '../- Placeholders -/FakeComment';
+import { StoryCommentOptions } from '../- Shared -/StoryCommentOptions';
 import { useGetAndDisplayComment } from '../../Hooks/UseGetAndDisplayComment';
 import { useBookmarkTheItem } from '../../Hooks/UseBookmarkTheItem';
 import { useDispatch } from 'react-redux';
-import { getRepliesCount, collapseExpandComment } from '../../Store/actions';
+import { getScrolledCommentID } from '../../Store/actions';
 import { getBookmarkedItems, themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Stories/StoryComment.css';
 
-export function StoryComment({ commentID, storyId }) {
+export function StoryComment({ storyId, commentID, goToComment }) {
 
     const dispatch = useDispatch();
+
+    const commentRef = useRef(null);
 
     const { 
         dark, 
         modern, 
         commentToDisplay,
+        isScrolledComment,
         parentUser, 
         searchValue,
         commentIsExpanded, 
     } = useGetAndDisplayComment(dispatch, commentID);
 
     const { isBookmarked, toggleBookmark } = useBookmarkTheItem(commentID, 'comment', getBookmarkedItems);
+
+    useEffect(() => {
+        if (isScrolledComment) {
+            commentRef.current && commentRef.current.scrollIntoView({
+                behavior: "smooth"
+            });
+            setTimeout(() => dispatch(getScrolledCommentID(0)), 750)
+        } 
+    }, [isScrolledComment])
 
     if (!commentToDisplay) return <FakeComment />;
 
@@ -31,18 +44,17 @@ export function StoryComment({ commentID, storyId }) {
 
     const isSearched = item.by.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
 
+    const { nestLevel, next } = goToComment;
+
     return (
         status && status === 'isLoaded' 
-        ?   <article className={themedClass('story-comment', dark, modern)}>
+        ?   <article className={themedClass('story-comment', dark, modern)} ref={commentRef}>
             {isSearched &&
                 <>
-                    <div className={themedClass('story-comment-top-wrap', dark, modern)}>
+                    <div className={`${themedClass('story-comment-top-wrap', dark, modern)} ${isScrolledComment ? 'is-scrolled' : ''}`}>
                         <p 
                             className='comment-bookmark' 
-                            onClick={() => (
-                                !repliesCount && dispatch(getRepliesCount(commentID)),
-                                toggleBookmark(commentID)
-                            )}
+                            onClick={() => toggleBookmark(commentID)}
                         >
                             <span className={themedClass('comment-bookmark-star',dark, modern)}>
                                 {isBookmarked ? '\u2605' : '\u2606'}
@@ -50,15 +62,16 @@ export function StoryComment({ commentID, storyId }) {
                         </p>
                         <User user={item.by} />&nbsp;
                         <TimeAgo time={item.time}/>&ensp;
-                        <p 
-                            className={themedClass('comment-exp-collapse', dark, modern)}
-                            onClick={() => (
-                                !repliesCount && dispatch(getRepliesCount(commentID)),
-                                dispatch(collapseExpandComment(commentID))
-                            )}
-                        >
-                            {commentIsExpanded ? `[ - ]` : `[ ${repliesCount} more ]`}
-                        </p>
+                        <StoryCommentOptions 
+                            commentID={commentID}
+                            dark={dark}
+                            modern={modern}
+                            dispatch={dispatch}
+                            themedClass={themedClass}
+                            repliesCount={repliesCount}
+                            commentIsExpanded={commentIsExpanded}
+                            goToComment={goToComment}
+                        />
                     </div> 
                     {commentIsExpanded &&
                         <div className={themedClass('story-comment-bot-wrap', dark, modern)}>
@@ -76,8 +89,20 @@ export function StoryComment({ commentID, storyId }) {
                 </>
             }
             {commentIsExpanded ? 
-                item.kids && item.kids.map(kidID => 
-                    <StoryComment key={kidID} commentID={kidID} storyId={storyId} />) 
+                item.kids && item.kids.map((kidID, i, arr) => 
+                    <StoryComment 
+                        key={kidID} 
+                        commentID={kidID} 
+                        storyId={storyId} 
+                        goToComment={{
+                            ...goToComment,
+                            nestLevel: nestLevel + 1,
+                            parent: commentID,
+                            prev: arr[i - 1] ? arr[i - 1] : 0,
+                            next: arr[i + 1] ? arr[i + 1] : next
+                        }}
+                    />
+                ) 
                 : null
             }
             </article>

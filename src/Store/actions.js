@@ -17,6 +17,14 @@ export const selectClassicTheme = () => {
     }
 }
 
+// SCROLLED COMMENT
+export const getScrolledCommentID = commentID => {
+    return {
+        type: 'GET_SCROLLED_COMMENT_ID',
+        payload: commentID
+    }
+}
+
 // COMMENTS
 export const getComment = comment => {
     return {

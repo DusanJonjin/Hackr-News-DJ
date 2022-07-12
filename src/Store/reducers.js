@@ -15,6 +15,15 @@ const themeReducer = (state={dark: false, modern: false}, action) => {
     }
 }
 
+const scrolledCommentIDReducer = (state=0, action) => {
+    switch (action.type) {
+        case 'GET_SCROLLED_COMMENT_ID': 
+            const id = action.payload;
+            return id;
+        default: return state;
+    }
+}
+
 const commentsReducer = (state=[], action) => {
     switch (action.type) {
         case 'GET_COMMENT':
@@ -78,6 +87,7 @@ const searchValueReducer = (state='', action) => {
 export const reducers = combineReducers(
     {
         theme: themeReducer,
+        scrolledCommentID: scrolledCommentIDReducer,
         comments: commentsReducer,
         collapsedComments: collapsedCommentsReducer,
         searchValue: searchValueReducer

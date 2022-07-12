@@ -11,6 +11,8 @@ export function useGetAndDisplayComment(dispatch, commentID) {
 
     const parentId = commentToDisplay?.item.parent;
 
+    const isScrolledComment = useSelector(state => state.scrolledCommentID === commentID);
+
     const parent = useSelector(state => state.comments.find(comment => comment.item.id === parentId));
 
     const parentUser = parent?.item.type === 'story' ? '': `<span class='reply-to'><@${parent?.item.by}></span>`;
@@ -33,6 +35,7 @@ export function useGetAndDisplayComment(dispatch, commentID) {
       dark, 
       modern, 
       commentToDisplay,
+      isScrolledComment,
       parentUser,
       searchValue,
       commentIsExpanded, 

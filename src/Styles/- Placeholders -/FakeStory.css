@@ -5,7 +5,7 @@
     padding: 0 0;
     margin: 0 0;
     border-radius: 4px;
-    background: rgb(181, 210, 219);
+    background: hsl(194, 28%, 83%);
 }
 
 .modern-fake-num {
@@ -19,7 +19,7 @@
 .fake-story-top {
     max-width: 93%;
     height: 42px;
-    background: rgb(178, 210, 238);
+    background: hsl(208, 50%, 82%);
     border-radius: 4px;
     margin: 0 0 0 0;
     transition: var(--main-transition);
@@ -74,7 +74,7 @@
 
 .fake-story-bottom {
     grid-column: 2;
-    background: rgb(181, 210, 219);
+    background: hsl(194, 28%, 82%);
     max-width: 75%;
     height: 28px;
     margin: 2px 0;
