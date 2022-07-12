@@ -64,7 +64,8 @@ export function StoryBmarkComment({ commentID, itemKey, goToComment }) {
                 <>
                     <div className={`${themedClass('story-comment-top-wrap', dark, modern)} ${isScrolledComment ? 'is-scrolled' : ''}`}>
                         <User user={item.by} />&nbsp;
-                        <TimeAgo time={item.time}/>&ensp;
+                        <TimeAgo time={item.time}/>
+                        {isNew && <p className='new-comm'>NEW</p>}&ensp;
                         <StoryCommentOptions 
                             commentID={commentID}
                             dark={dark}
@@ -75,7 +76,6 @@ export function StoryBmarkComment({ commentID, itemKey, goToComment }) {
                             commentIsExpanded={commentIsExpanded}
                             goToComment={goToComment}
                         />
-                        {isNew && <p className='new-comm'>NEW</p>}
                     </div> 
                     {commentIsExpanded &&
                         <div className={themedClass('story-comment-bot-wrap', dark, modern)}>
