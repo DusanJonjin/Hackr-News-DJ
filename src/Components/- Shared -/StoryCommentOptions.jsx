@@ -30,7 +30,7 @@ export function StoryCommentOptions(props) {
             <p onClick={() => dispatch(getScrolledCommentID(next))}>next</p>
             <p 
                 onClick={() => (
-                    !repliesCount && dispatch(getRepliesCount(commentID)),
+                    dispatch(getRepliesCount(commentID)),
                     dispatch(collapseExpandComment(commentID))
                 )}
             >
@@ -39,7 +39,7 @@ export function StoryCommentOptions(props) {
             {nestLevel > 0 
             ?   <p 
                     onClick={() => (
-                        !repliesCount && dispatch(getRepliesCount(root)),
+                        dispatch(getRepliesCount(root)),
                         dispatch(collapseExpandComment(root)),
                         dispatch(getScrolledCommentID(root))
                     )}

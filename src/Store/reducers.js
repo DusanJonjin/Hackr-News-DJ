@@ -35,17 +35,21 @@ const commentsReducer = (state=[], action) => {
             return clearAllComments;
         case 'GET_REPLIES_COUNT':
             const commentID = action.payload;
-            const calcRepliesCount = (commentID, accum) => {
-                const count = state.reduce((acc, comment) => 
-                    comment.item.parent === commentID ? calcRepliesCount(comment.item.id, acc + 1) : acc
-                , accum);
-                return count;
+            const chosenComment = state.find(comment => comment.item.id === commentID);
+            if (chosenComment.repliesCount) return state;
+            else {
+                const calcRepliesCount = (commentID, accum) => {
+                    const count = state.reduce((acc, comment) => 
+                        comment.item.parent === commentID ? calcRepliesCount(comment.item.id, acc + 1) : acc
+                    , accum);
+                    return count;
+                }
+                const repliesCount = calcRepliesCount(commentID, 1);
+                const addRepliesCount = state.map(comment =>
+                    comment.item.id === commentID ? {...comment, repliesCount} : comment
+                );
+                return addRepliesCount;
             }
-            const repliesCount = calcRepliesCount(commentID, 1);
-            const addRepliesCount = state.map(comment =>
-                comment.item.id === commentID ? {...comment, repliesCount} : comment
-            );
-            return addRepliesCount;
         default: return state;
     }
 }
