@@ -76,9 +76,8 @@
 }
 
 .modern-comment-bookmark-star {
-    font-size: 22px;
-    color: hsl(221, 77%, 62%);
-    top: -60%;
+    color: hsl(221, 77%, 65%);
+    top: -58%;
     left: -5%;
 }
 
@@ -86,11 +85,7 @@
     color: hsl(212, 73%, 71%);
 }
 
-.modern-story-comment-top-wrap .user {
-    text-decoration: underline;
- }
-
- .story-comment-top-wrap > .new-comm {
+.story-comment-top-wrap > .new-comm {
     padding: 0 .3em;
     margin: 0 .2em 0 .7em;
     border-radius: 3px;

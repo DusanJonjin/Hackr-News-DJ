@@ -17,6 +17,7 @@ export function StoryCommentOptions(props) {
     const {
         nestLevel,
         root,
+        rootsLength,
         parent,
         prev,
         next
@@ -27,7 +28,7 @@ export function StoryCommentOptions(props) {
             {nestLevel > 1 ? <p onClick={() => dispatch(getScrolledCommentID(root))}>root</p> : ''}
             {parent !== 0 ? <p onClick={() => dispatch(getScrolledCommentID(parent))}>parent</p> : ''}
             {prev !== 0 ? <p onClick={() => dispatch(getScrolledCommentID(prev))}>prev</p> : ''}
-            <p onClick={() => dispatch(getScrolledCommentID(next))}>next</p>
+            {next !== 0 && rootsLength > 1 ? <p onClick={() => dispatch(getScrolledCommentID(next))}>next</p> : ''}
             <p 
                 onClick={() => (
                     dispatch(getRepliesCount(commentID)),

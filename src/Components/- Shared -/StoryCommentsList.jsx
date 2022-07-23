@@ -5,6 +5,8 @@ import '../../Styles/Stories/StoryCommentsList.css';
 
 export function StoryCommentsList({ commentsIDs, itemKey, storyId, dark, modern, fromBookmark }) {
 
+    const rootsLength = commentsIDs.length
+
     return (
         <ul className={themedClass('story-comments-ul', dark, modern)}>
             {commentsIDs.map((commentID, i, arr) => 
@@ -14,11 +16,10 @@ export function StoryCommentsList({ commentsIDs, itemKey, storyId, dark, modern,
                         commentID={commentID} 
                         itemKey={itemKey}
                         storyId={storyId}
-                        rootPreviousCommentID={arr[ i - 1] ? arr[ i - 1] : 0}
-                        rootNextCommentID={arr[i + 1] ? arr[i + 1] : 0}
                         goToComment={{
                             nestLevel: 0,
                             root: commentID, 
+                            rootsLength,
                             parent: 0, 
                             prev: arr[i - 1] ? arr[i - 1] : 0,
                             next: arr[i + 1] ? arr[i + 1] : 0
