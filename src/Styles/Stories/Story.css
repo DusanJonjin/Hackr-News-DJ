@@ -27,16 +27,17 @@
 
 .story-num {
     grid-row: 1;
-    font-size: 14px;
+    font-size: 13px;
     text-align: right;
-    margin: 3px 5px 0 0;
+    margin: 4px 5px 0 0;
     padding: 0 0;
     color: hsl(222, 7%, 35%);
     transition: var(--main-transition);
 }
 
 .modern-story-num {
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
     color: hsl(222, 7%, 45%);
     text-align: left;
     margin: 0 5px 0 0;
@@ -72,7 +73,7 @@ two classes are active together: */
 }
 
 .story-top-wrap > h2 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     margin: 0 5px 0 0;
     padding: 0;
@@ -87,7 +88,7 @@ two classes are active together: */
 
 .title-link {
    text-decoration: none;
-   color: hsl(231, 48%, 36%);
+   color: hsl(231, 48%, 35%);
    transition: var(--main-transition);
 }
 
@@ -100,7 +101,7 @@ two classes are active together: */
 }
 
 .dark-title-link:hover {
-    color: hsl(212, 74%, 65%);
+    color: hsl(212, 74%, 70%);
 }
 
 .story-top-wrap > .domain {
@@ -263,6 +264,7 @@ two classes are active together: */
     }
 
     .story-top-wrap > h2 {
+        font-size: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -271,6 +273,11 @@ two classes are active together: */
         height: 45px;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .story-num {
+        font-size: 14px;
+        margin: 2px 5px 0 0;
     }
 
     .modern-story-num {
