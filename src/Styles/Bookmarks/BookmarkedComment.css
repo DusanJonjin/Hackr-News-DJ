@@ -38,7 +38,7 @@
 
 .bm-comment-top-wrap > p:first-child {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 600;
     color:hsl(210, 6%, 35%);
 }
 
@@ -55,6 +55,7 @@
 
 .bm-comment-top-wrap strong {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     color:hsl(210, 6%, 52%);
 }
 

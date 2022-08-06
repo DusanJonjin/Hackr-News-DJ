@@ -73,6 +73,7 @@ two classes are active together: */
 
 .story-top-wrap > h2 {
     font-size: 15px;
+    font-weight: 600;
     margin: 0 5px 0 0;
     padding: 0;
     display: inline;
@@ -117,7 +118,7 @@ two classes are active together: */
     font-size: 14px;
     letter-spacing: .04em;
     margin: 5px 0 0 0;
-    font-weight: bold;
+    font-weight: 500;
     color: hsl(240, 2%, 30%);
     transition: var(--main-transition);
 }
@@ -163,7 +164,7 @@ two classes are active together: */
 }
 
 .story-bottom-wrap p:last-child {
-    font-weight: bold;
+    font-weight: 500;
     color: hsl(3, 53%, 58%);
     border: none;
     cursor: pointer;

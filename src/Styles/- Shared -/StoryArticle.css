@@ -23,12 +23,13 @@
 }
 
 .modern-story-comm-details-top-wrap {
-    font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 
 .story-comm-details-top-wrap > h2 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-weight: 600;
     display: inline;
     margin: 0 5px 0 0;
     transition: var(--main-transition);
