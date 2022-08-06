@@ -6,10 +6,10 @@ export const getDomainFromUrl = url => {
     //If match is null, url is short - we need to slice out 'http(s)://' from it:
     if (!longUrl) {
         if (url.includes('https://')) {
-            return url.slice(8);
+            return url.slice(url.includes('www.') ? 12 : 8);
         }
         else if (url.includes('http://')) {
-            return url.slice(7)
+            return url.slice(url.includes('www.') ? 11 : 7);
         }
         return url;
     }
