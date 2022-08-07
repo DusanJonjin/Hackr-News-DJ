@@ -29,7 +29,7 @@
     grid-row: 1;
     font-size: 13px;
     text-align: right;
-    margin: 4px 5px 0 0;
+    margin: 3px 5px 0 0;
     padding: 0 0;
     color: hsl(222, 7%, 35%);
     transition: var(--main-transition);
@@ -52,6 +52,7 @@
 /*** story title and short url top part ***/
 .story-top-wrap {
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
 }
 
 .dark-story-top-wrap {
@@ -64,6 +65,7 @@
     padding: 6px 8px;
     word-wrap: break-word;
     transition: var(--main-transition);
+    line-height: normal;
 }
 
 /* show dark background only if these 
@@ -257,6 +259,7 @@ two classes are active together: */
 
     .story-top-wrap {
         padding: 0 0;
+        line-height: normal;
     }
 
     .modern-story-top-wrap {
