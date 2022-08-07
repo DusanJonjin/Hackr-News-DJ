@@ -88,12 +88,12 @@ two classes are active together: */
 
 .title-link {
    text-decoration: none;
-   color: hsl(231, 48%, 35%);
+   color: hsl(231, 48%, 32%);
    transition: var(--main-transition);
 }
 
 .title-link:hover {
-    color: hsl(231, 42%, 52%);
+    color: hsl(231, 48%, 47%);
 }
 
 .dark-title-link {
