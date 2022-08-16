@@ -26,8 +26,7 @@ we insert in this function, and then get it back from server as json object) */
 export const getItem = async (itemID, abortSignal) => {
     try {
         const fetchItem = await fetch(
-            `${mainURL}/item/${itemID}.json?print=pretty`,
-            {signal: abortSignal}
+            `${mainURL}/item/${itemID}.json?print=pretty`, {signal: abortSignal}
         );
         const item = await fetchItem.json();
         return {status: 'isLoaded', item}
@@ -43,8 +42,7 @@ export const getItem = async (itemID, abortSignal) => {
 export const getMaxItem = async (abortSignal) => {
     try {
         const fetchMaxItemID = await fetch(
-            `${mainURL}/maxitem.json?print=pretty`,
-            {signal: abortSignal}
+            `${mainURL}/maxitem.json?print=pretty`, {signal: abortSignal}
         );
         const maxItemID = await fetchMaxItemID.json();
         //be carefull on the next line

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: 31px 1fr;
-    padding: .15em 0;
+    padding: .1em 0;
     transition: var(--main-transition);
 }
 
@@ -13,7 +13,7 @@
     border-radius: 6px;
     border: 1px solid var(--modern-story-background);
     padding: 0 10px;
-    margin: 0 5px;
+    margin: 0 7px;
 }
 
 .dark-story {
@@ -52,7 +52,7 @@
 /*** story title and short url top part ***/
 .story-top-wrap {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .dark-story-top-wrap {
@@ -108,7 +108,7 @@ two classes are active together: */
 
 .story-top-wrap > .domain {
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     color: hsl(210, 3%, 35%);
     padding: 0;
     margin: 0 0 0 0;
@@ -256,6 +256,14 @@ two classes are active together: */
 /*** end of story score, user, comments part ***/
 
 @media only screen and (min-width: 670px) {
+    .story {
+        padding: .15em 0;
+    }
+
+    .modern-story {
+        padding: 0 10px;
+        margin: 0 5px;
+    }
 
     .story-top-wrap {
         padding: 0 0;
@@ -276,6 +284,10 @@ two classes are active together: */
         height: 45px;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .story-top-wrap > .domain {
+        font-size: 13px;
     }
 
     .story-num {
