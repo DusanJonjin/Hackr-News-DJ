@@ -56,7 +56,8 @@
     width: 16px;
     height: 15px;
     margin-right: 4px;
-    cursor: pointer;
+    cursor: auto;
+    user-select: none;
 }
 
 .modern-story-comment-top-wrap >
@@ -72,7 +73,6 @@
     top: -62%;
     left: 0;
     color: hsl(231, 99%, 75%);
-    user-select: none;
 }
 
 .modern-comment-bookmark-star {
@@ -223,6 +223,11 @@
 
     .modern-comment-bookmark-star {
         top: -65%;
+    }
+
+    .story-comment-top-wrap >
+    .comment-bookmark {
+        cursor: pointer;
     }
 
     .modern-story-comment-bot-wrap * {

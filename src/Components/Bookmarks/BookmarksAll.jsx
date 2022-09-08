@@ -18,16 +18,15 @@ export function BookmarksAll({ dark, modern }) {
     const handleClearLocal = () => {
         readFromLocal();
         setClearLocal(true);
-    }
+    };
 
     useLayoutEffect(()=> {
         clearLocal && localStorage.clear();
     }, [clearLocal])
 
     useLayoutEffect(() => {
-        setAllKeys(Object.keys(localStorage))
+        setAllKeys(Object.keys(localStorage));
     }, [toggleReadLocal, clearLocal])
-
 
     if (!allKeys.length) return <BookmarksEmpty />;
 

@@ -2,7 +2,8 @@
     position: relative;
     width: 15px;
     height: 15px;
-    cursor: pointer;
+    cursor: auto;
+    user-select: none;
 }
 
 .modern-story-bm-star-wrap {
@@ -17,7 +18,6 @@
     top: -67%;
     left: 0%;
     color: hsl(231, 71%, 47%);
-    user-select: none;
 }
 
 .modern-story-bookmark-star {
@@ -33,6 +33,7 @@
     .story-bm-star-wrap {
         width: 16px;
         height: 16px;
+        cursor: pointer;
     }
 
     .story-bookmark-star {

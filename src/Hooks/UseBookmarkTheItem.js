@@ -3,18 +3,18 @@ import { useSelector } from 'react-redux';
 
 export function useBookmarkTheItem(id, type, getBookmarkedItems) {
 
-    const initialBookmark = {id: 0, toggle: false}
+    const initialBookmark = {id: 0, toggle: false};
 
     const [bookmark, setBookmark] = useState(initialBookmark);
 
-    const key = `${type}-${id}`
+    const key = `${type}-${id}`;
 
     const [isBookmarked, setIsBookmarked] = useState(localStorage.getItem(key) ? true : false);
 
     const bookmarkedItems = useSelector(state => getBookmarkedItems(state, bookmark, id));
 
     const toggleBookmark = id => {
-        setBookmark(prevBookmark => ({id: id, toggle: !prevBookmark.toggle}))
+        setBookmark(prevBookmark => ({id: id, toggle: !prevBookmark.toggle}));
     };
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export function useBookmarkTheItem(id, type, getBookmarkedItems) {
                 setBookmark(initialBookmark);
             }
             if (bookmarkActive) {
-                localStorage.removeItem(key)
+                localStorage.removeItem(key);
                 setIsBookmarked(false);
                 setBookmark(initialBookmark);
             }
