@@ -76,7 +76,7 @@ two classes are active together: */
 
 .story-top-wrap > h2 {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0 5px 0 0;
     padding: 0;
     display: inline;
@@ -90,7 +90,7 @@ two classes are active together: */
 
 .title-link {
    text-decoration: none;
-   color: hsl(231, 48%, 30%);
+   color: hsl(231, 48%, 27%);
    transition: var(--main-transition);
 }
 
@@ -147,7 +147,7 @@ two classes are active together: */
 
 .story-bottom-wrap p {
     font-size: 13px;
-    color: hsl(240, 4%, 33%);
+    color: hsl(240, 2%, 35%);
     padding: 0;
     margin: 2px 5px 2px 0;
     transition: var(--main-transition);

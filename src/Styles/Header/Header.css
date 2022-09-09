@@ -33,6 +33,7 @@
     max-width: 23px;
     display: block;
     margin-right: 7px;
+    border-radius: 2px;
 }
 
 .app-header #logo-wrapper > h1 {
@@ -165,8 +166,8 @@
     }
 
     #logo-wrapper > img {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 27px;
+        max-height: 27px;
         margin-right: 8px;
     }
 
