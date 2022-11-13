@@ -4,7 +4,7 @@ export function User({ user, byWord='' }) {
 
     return (
         <p className='user'>
-           {byWord} {user}
+           {byWord} <span>{user}</span>
         </p>
     );
 }

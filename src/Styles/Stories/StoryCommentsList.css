@@ -8,12 +8,12 @@
 .modern-story-comments-ul,
 .modern-comments-ol {
     padding: 0 0 10px 0;
-    background-color: hsl(194, 100%, 84%);
+    background-color: hsl(194, 100%, 85%);
 }
 
 .dark-story-comments-ul.modern-story-comments-ul,
 .dark-comments-ol.modern-comments-ol {
-    background-color: var(--dark-story-top-color);
+    background-color: hsl(240, 16%, 18%);
 }
 
 .story-comments-li,

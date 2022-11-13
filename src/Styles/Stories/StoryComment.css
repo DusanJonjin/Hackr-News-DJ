@@ -1,14 +1,14 @@
 .story-comment {
     max-width: 1300px;
     margin: 0 0 0 0; 
-    padding: 0 0 0 10px;
+    padding: 0 3px 0 12px;
     scroll-margin: 52px;
     transition: var(--main-transition);
 }
 
 .modern-story-comment {
     max-width: 100%;
-    background-color:rgb(239, 250, 255);
+    background-color:hsl(197, 41%, 96%);
     border-radius: 7px;
     margin: 0 0 8px 0; 
 }
@@ -213,7 +213,7 @@
     
     .modern-story-comment {
         margin: 0 3px 10px 3px;
-        padding: 0 15px;
+        padding: 0 20px 0 15px;
     }
 
     .modern-story-comment-top-wrap {

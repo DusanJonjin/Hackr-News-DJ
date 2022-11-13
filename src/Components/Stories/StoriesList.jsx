@@ -17,7 +17,8 @@ export function StoriesList({ storiesIDs, pageNum, storiesPerPage }) {
                     <Story 
                         storyID={storyID}
                         storyNum={calcStoryNum(index)}
-                        pageNum={pageNum}        
+                        dark={dark}
+                        modern={modern}        
                     />
                 </li>
             )}

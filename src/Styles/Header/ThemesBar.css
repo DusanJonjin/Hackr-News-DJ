@@ -1,8 +1,6 @@
 .theme-selection-wrap {
-    width: 0;
-    height: 150px;
-    padding-top: 2em;
     background-color: hsl(17, 100%, 65%);
+    padding: 2em 2em 2em 2.3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,9 +8,11 @@
     position: absolute;
     top: 100%;
     right: 0;
-    pointer-events: none;
+    white-space: nowrap;
     overflow: hidden;
+    transform: translate3d(0, -100%, -1px);
     transition: .2s ease;
+    z-index: -2;
 }
 
 .dark-theme-selection-wrap {
@@ -20,20 +20,19 @@
 }
 
 .theme-sel-open {
+    transform: translate3d(0, 0, -1px);
     transition: .3s ease;
-    pointer-events: initial;
-    width: 130px;
 }
 
 .theme-selection-wrap > .btn {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
-    font-weight: bold;
-    color: hsl(8, 22%, 27%);
-    border-radius: 5px;
+    font-weight: 500;
+    color: hsl(7, 5%, 25%);
+    border-radius: 4px;
     width: 4.5em;
     padding: .3em 0;
-    background-color: hsl(17, 100%, 85%);
+    background-color: hsl(17, 100%, 84%);
     border: none;
     cursor: pointer;
     transition: var(--main-transition);
@@ -47,7 +46,7 @@
 
 .theme-selection-wrap > .btn-selected {
     color: hsl(22, 100%, 97%);
-    font-weight: 500;
+    font-weight: 400;
     background-color: transparent;
     text-decoration: underline;
     pointer-events: none;
@@ -61,7 +60,7 @@
     width: 50px;
     height: 20px;
     margin-top: 5px;
-    background-color: rgb(30, 30, 30);
+    background-color: hsl(210, 2%, 22%);
     border-radius: 12px;
     background-image: url('../../Background\ Images/moon.png');
     background-repeat: no-repeat;
@@ -86,7 +85,7 @@
 }
 
 .dark-theme-dark-bar {
-    background-color: rgb(68, 165, 255);
+    background-color: hsl(209, 100%, 75%);
     background-image: url('../../Background\ Images/sun.png');
     background-repeat: no-repeat;
     background-position: 90%;
@@ -96,7 +95,7 @@
 .dark-theme-dark-bar::after {
     box-shadow: 0px 0px 1px 3px rgb(252, 187, 171);
     position: absolute;
-    right: 60%;
+    right: 57%;
 }
 
 @media only screen and (min-width: 1340px) {
@@ -109,7 +108,7 @@
         flex-direction: row;
         gap: 7px;
         background-color: transparent;
-        pointer-events: initial;
+        transform: none;
     }
 
     .theme-dark-bar {

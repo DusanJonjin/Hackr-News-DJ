@@ -20,7 +20,7 @@
 
 .dark-story-comments-wrap.modern-story-comments-wrap,
 .dark-comments.modern-comments {
-    background-color: var(--dark-story-top-color);
+    background-color: hsl(240, 16%, 18%);
 }
 
 .details-comments-wrap {
@@ -37,7 +37,7 @@
 }
 
 .modern-fake-comments-count {
-    background-color: rgb(174, 236, 255);
+    background-color: hsl(194, 100%, 86%);
 }
 
 .dark-fake-comments-count.modern-fake-comments-count {
@@ -75,13 +75,13 @@
 }
 
 .modern-count-search-wrap {
-    background-color: rgb(174, 236, 255);
+    background-color: hsl(194, 100%, 85%);
     width: 100%;
     justify-content: space-around;
 }
 
 .dark-count-search-wrap.modern-count-search-wrap {
-    background-color: var(--dark-story-top-color);
+    background-color: hsl(240, 16%, 18%);
 }
 
 .count-search-wrap > .details-comm-count {
@@ -100,16 +100,16 @@
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
-    background-color: rgb(174, 236, 255);
+    background-color: hsl(194, 100%, 85%);
 }
 
 .dark-count-search-wrap > .details-comm-count {
-    color:rgb(165, 174, 185);
+    color:hsl(213, 12%, 69%);
     background-color: transparent;
 }
 
 .dark-count-search-wrap.modern-count-search-wrap > .details-comm-count {
-    background-color: var(--dark-story-top-color);
+    background-color: hsl(240, 16%, 18%);
 }
 
 .count-search-wrap > input {
@@ -121,7 +121,7 @@
     background-size: 18px;
     background-position: 3px 4px;
     height: 1.9em;
-    width: 23ch;
+    width: 22ch;
     border: 1px solid rgb(179, 189, 201);
     border-radius: 3px;
 }
@@ -149,7 +149,7 @@
 .modern-count-search-wrap > input {
     font-size: 15px;
     height: 1.7em;
-    width: 19ch;
+    width: 20ch;
     background-position: 4px 4px;
     border: 1px solid hsl(213, 16%, 60%);
     border-radius: 15px;
@@ -173,8 +173,8 @@
 
 .details-comments-text {
     font-size: 15px;
-    color: hsl(240, 2%, 42%);
-    background: hsl(200, 67%, 92%);
+    color: hsl(240, 2%, 41%);
+    background: hsl(195, 35%, 92%);
     padding: 0 15px;
     overflow-x: auto;
     word-break: break-word;
@@ -189,7 +189,7 @@
 
 .dark-details-comments-text {
     background-color: hsl(240, 21%, 13%);
-    color: hsl(240, 3%, 67%);
+    color: hsl(240, 3%, 72%);
 }
 
 .modern-details-comments-text.dark-details-comments-text {

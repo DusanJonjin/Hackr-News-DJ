@@ -11,13 +11,10 @@ import { FakeStory } from '../- Placeholders -/FakeStory';
 import { getItem } from '../../API/ApiCalls';
 import { usePreventSetStateOnUnmount } from '../../Hooks/PreventSetStateOnUnmount';
 import { getDomainFromUrl, themedClass } from '../../Utilities/helperFunctions';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../../Styles/Stories/Story.css';
 
-export function Story({ storyID, storyNum }) {
-    
-    const { dark, modern } = useSelector(state => state.theme);
+export function Story({ storyID, storyNum, dark, modern }) {
 
     const [story, setStory] = useState({status: 'isLoading', item: {}});
 
@@ -44,8 +41,9 @@ export function Story({ storyID, storyNum }) {
     const linkDisabled = !item.descendants && !item.text;
 
     return (
-        status === 'isLoading' ? <FakeStory dark={dark} modern={modern}/> :
-            <article className={themedClass('story', dark, modern)}>
+        status === 'isLoading' 
+            ? <FakeStory dark={dark} modern={modern}/> 
+            : <article className={themedClass('story', dark, modern)}>
                 <p className={themedClass('story-num', dark, modern)}>
                     {storyNum}.
                 </p>

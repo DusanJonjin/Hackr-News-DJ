@@ -14,15 +14,15 @@ export function StoryOrBmarkComment(props) {
 
     return (
         fromBookmark 
-        ?   <StoryBmarkComment 
+        ? <StoryBmarkComment 
                 commentID={commentID} 
                 itemKey={itemKey} 
                 goToComment={goToComment}
-            />
-        :   <StoryComment 
+        />
+        : <StoryComment 
                 storyId={storyId} 
                 commentID={commentID} 
                 goToComment={goToComment}
-            />
+        />
     );
 }

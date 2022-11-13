@@ -1,12 +1,12 @@
 :root {
     --classic-main-width: 1550px;
-    --classic-main-background: hsl(200, 24%, 93.5%);
+    --classic-main-background: hsl(190, 11%, 93.5%);
     --dark-story-top-color: hsl(240, 16%, 20%);
     --story-text-color: hsl(240, 4%, 26%);
-    --dark-story-text-color: hsl(240, 2%, 79%);
+    --dark-story-text-color: hsl(240, 2%, 80%);
     --modern-story-background: hsl(198, 100%, 86%);
     --modern-story-dark-bground: hsl(240, 21%, 13.5%);
-    --fake-top-color: rgb(143, 190, 235);
+    --fake-top-color: hsl(209, 70%, 78%);
     --main-transition: .0s ease;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .app-wrapper {
-    background-color: rgb(243, 243, 244);
+    background-color: hsl(240, 4%, 96%);
     transition: var(--main-transition);
     min-height: 100vh;
 }

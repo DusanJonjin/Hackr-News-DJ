@@ -28,7 +28,7 @@
 .modern-fake-story-top {
     max-width: 100%;
     height: 79px;
-    background: rgb(233, 248, 255);
+    background: hsl(210, 100%, 98.5%);
     border-radius: 3px;
     margin: 24px auto 0px auto;
     position: relative;
@@ -41,8 +41,8 @@
     position: absolute;
     width: 50%;
     height: 21%;
-    background: rgb(154, 187, 202);
-    border-radius: 6px;
+    background: hsl(199, 31%, 82%);
+    border-radius: 5px;
     bottom: 10px;
     left: 10px;
     transition: var(--main-transition);
@@ -74,7 +74,7 @@
 
 .fake-story-bottom {
     grid-column: 2;
-    background: hsl(194, 28%, 82%);
+    background: hsl(194, 28%, 80%);
     max-width: 75%;
     height: 28px;
     margin: 2px 0;

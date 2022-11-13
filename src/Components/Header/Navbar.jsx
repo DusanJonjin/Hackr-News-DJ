@@ -18,7 +18,7 @@ export function Navbar(props) {
             className={`${themedClass('navbar', dark)} ${navMenu ? 'navbar-open' : ''}`}
         >
             <ul>
-            {pathsAndApis.map(({ path }, i) =>             
+            {pathsAndApis.map(({ path }, i) => !path.includes('user') &&
                 <li 
                     key={i}
                     className={`${themedClass('nav-li', dark)} ${pathname.includes(path) ? 'selected-nav-li' : ''}`} 

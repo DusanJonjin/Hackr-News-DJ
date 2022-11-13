@@ -8,7 +8,8 @@ export const pathsAndApis = [
         api: 'newstories'
     }, 
     {
-        path: '/comments'
+        path: '/comments',
+        api: ''
     },
     {   
         path: '/ask',
@@ -24,6 +25,11 @@ export const pathsAndApis = [
     },
     {   
         path: '/bookmarks',
+        api: ''
+    },
+    {
+        path: '/user',
+        api: 'user'
     }
 ];
 

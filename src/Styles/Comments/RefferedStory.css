@@ -1,5 +1,6 @@
 .story-comment-top-wrap > h2 {
     font-size: 14px;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     transition: var(--main-transition);

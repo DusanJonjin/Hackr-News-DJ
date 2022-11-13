@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: 31px 1fr;
-    padding: .1em 0;
+    padding: .15em 0;
     transition: var(--main-transition);
 }
 
@@ -13,7 +13,7 @@
     border-radius: 6px;
     border: 1px solid var(--modern-story-background);
     padding: 0 10px;
-    margin: 0 7px;
+    margin: 0 8px;
 }
 
 .dark-story {
@@ -22,7 +22,7 @@
 
 .modern-story.dark-story {
     border: 1px solid hsl(240, 21%, 14%);
-    background: hsl(240, 21%, 15%);
+    background: hsl(240, 20%, 18%);
 }
 
 .story-num {
@@ -31,14 +31,14 @@
     text-align: right;
     margin: 2px 5px 0 0;
     padding: 0 0;
-    color: hsl(222, 7%, 35%);
+    color: hsl(240, 3%, 50%);
     transition: var(--main-transition);
 }
 
 .modern-story-num {
     font-size: 14px;
     font-weight: 600;
-    color: hsl(222, 7%, 45%);
+    color: hsl(222, 7%, 50%);
     text-align: left;
     margin: 0 5px 0 0;
     padding: 3px 0 5px 0;
@@ -60,22 +60,26 @@
 }
 
 .modern-story-top-wrap {
-    background: rgb(244, 249, 255);
+    background: hsl(210, 100%, 98.5%);
     border-radius: 3px;
     padding: 6px 8px;
     word-wrap: break-word;
     transition: var(--main-transition);
     line-height: normal;
+    border-top: 1px solid hsl(210, 65%, 85%);
+    border-bottom: 1px solid hsl(210, 65%, 85%);
 }
 
 /* show dark background only if these 
 two classes are active together: */
 .modern-story-top-wrap.dark-story-top-wrap {
-    background: var(--dark-story-top-color);
+    background-color: hsl(240, 20%, 14%);
+    border-top: 1px solid hsl(240, 16%, 27%);
+    border-bottom: 1px solid hsl(240, 16%, 27%);
 }
 
 .story-top-wrap > h2 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     margin: 0 5px 0 0;
     padding: 0;
@@ -83,23 +87,22 @@ two classes are active together: */
 }
 
 .modern-story-top-wrap > h2 {
-    font-size: 15px;
     margin: 0 0 0 0;
     display: block;
 }
 
 .title-link {
    text-decoration: none;
-   color: hsl(231, 48%, 27%);
+   color: hsl(229, 14%, 30%);
    transition: var(--main-transition);
 }
 
 .title-link:hover {
-    color: hsl(231, 48%, 47%);
+    color: hsl(231, 21%, 48%);
 }
 
 .dark-title-link {
-    color: hsl(212, 74%, 80%);
+    color: hsl(212, 74%, 81%);
 }
 
 .dark-title-link:hover {
@@ -108,8 +111,8 @@ two classes are active together: */
 
 .story-top-wrap > .domain {
     display: inline-block;
-    font-size: 12px;
-    color: hsl(210, 3%, 35%);
+    font-size: 13px;
+    color: hsl(220, 2%, 50%);
     padding: 0;
     margin: 0 0 0 0;
     transition: var(--main-transition);
@@ -117,17 +120,19 @@ two classes are active together: */
 
 .modern-story-top-wrap > .domain {
     display: block;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
     font-weight: 500;
-    color: hsl(240, 2%, 30%);
+    color: hsl(240, 2%, 38%);
     letter-spacing: .04em;
     margin: 5px 0 0 0;
     transition: var(--main-transition);
 }
 
 .dark-story-top-wrap > .domain {
-    color: hsl(240, 3%, 85%)
+    color: hsl(240, 2%, 70%);
+}
+
+.modern-story-top-wrap.dark-story-top-wrap > .domain {
+    color: hsl(240, 2%, 78%);
 }
 /*** end of story title and short url top part ***/
 
@@ -147,7 +152,7 @@ two classes are active together: */
 
 .story-bottom-wrap p {
     font-size: 13px;
-    color: hsl(240, 2%, 35%);
+    color: hsl(240, 3%, 42%);
     padding: 0;
     margin: 2px 5px 2px 0;
     transition: var(--main-transition);
@@ -155,6 +160,15 @@ two classes are active together: */
 
 .dark-story-bottom-wrap p {
     color: var(--dark-story-text-color);
+}
+
+.story-bottom-wrap .user > span {
+    font-weight: 500;
+    color: hsl(221, 7%, 45%);
+}
+
+.dark-story-bottom-wrap .user > span {
+    color: hsl(221, 5%, 83%);
 }
 
 .story-bottom-wrap p:nth-child(3) {
@@ -199,7 +213,7 @@ two classes are active together: */
     margin: 3px 5px 3px 0;
     padding: 4px 8px 3px 8px;
     border-radius: 12px;
-    background: hsl(202, 33%, 97.5%);
+    background: hsl(202, 30%, 98.5%);
     transition: var(--main-transition);
     border: none;
 }
@@ -223,13 +237,13 @@ two classes are active together: */
 .modern-story-bottom-wrap p:last-child > img {
     width: 16px;
     height: 16px;
-    vertical-align: -19%;
+    vertical-align: -15%;
     margin-left: 3px;
     transition: var(--main-transition);
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p {
-    background: hsl(240, 14%, 23%);
+    background: hsl(240, 14%, 22%);
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p:last-child {
@@ -256,13 +270,10 @@ two classes are active together: */
 /*** end of story score, user, comments part ***/
 
 @media only screen and (min-width: 670px) {
-    .story {
-        padding: .15em 0;
-    }
 
     .modern-story {
         padding: 0 10px;
-        margin: 0 5px;
+        margin: 0 6px;
     }
 
     .story-top-wrap {
@@ -275,7 +286,6 @@ two classes are active together: */
     }
 
     .story-top-wrap > h2 {
-        font-size: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -286,12 +296,9 @@ two classes are active together: */
         text-overflow: ellipsis;
     }
 
-    .story-top-wrap > .domain {
-        font-size: 13px;
-    }
-
     .story-num {
         font-size: 14px;
+        margin: 2px 5px 0 0;
     }
 
     .modern-story-num {
@@ -300,8 +307,7 @@ two classes are active together: */
     }
 
     .modern-story-top-wrap > .domain {
-        font-size: 14px;
-        margin: 1px 0 0 0;
+        margin: 0 0 0 0;
     }
 
     .story-bottom-wrap {
@@ -319,7 +325,7 @@ two classes are active together: */
 
     .modern-story-bottom-wrap p {
         /*2002 is unicode for two white spaces (same as &ensp;)*/
-        margin: 3px 7px 3px 0;
+        margin: 2px 7px 2px 0;
     }
 
     .modern-story-bottom-wrap p:last-child {

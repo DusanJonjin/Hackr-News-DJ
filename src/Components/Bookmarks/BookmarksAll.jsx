@@ -30,9 +30,11 @@ export function BookmarksAll({ dark, modern }) {
 
     if (!allKeys.length) return <BookmarksEmpty />;
 
-    const keys = allKeys.reduce((acc, v) => 
-        v.includes('story') ? {...acc, stories: [...acc.stories, v]} : {...acc, comments: [...acc.comments, v]}  
-    ,{stories: [], comments: []});
+    const keys = allKeys.reduce((acc, v) => {
+        if (v.includes('story')) return {...acc, stories: [...acc.stories, v]};
+        if (v.includes('comment')) return {...acc, comments: [...acc.comments, v]};
+        return acc;
+    }, {stories: [], comments: []});
 
     const {stories, comments} = keys;
 

@@ -1,10 +1,11 @@
 .story-comm-details {
-    padding: 10px 10px 7px 10px;
+    padding: 12px 10px 8px 10px;
     transition: var(--main-transition);
 }
 
 .modern-story-comm-details {
-    background-color: hsl(194, 100%, 78%);
+    background-color: hsl(194, 100%, 81%);
+    padding: 12px 10px 14px 10px;
 }
 
 .dark-story-comm-details {
@@ -12,7 +13,7 @@
 }
 
 .modern-story-comm-details.dark-story-comm-details {
-    background-color: rgb(27, 27, 41);
+    background-color: hsl(240, 21%, 15%);
 }
 
 /*** Article top wrap ***/
