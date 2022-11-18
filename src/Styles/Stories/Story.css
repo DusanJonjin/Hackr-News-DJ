@@ -72,7 +72,8 @@
 
 /* show dark background only if these 
 two classes are active together: */
-.modern-story-top-wrap.dark-story-top-wrap {
+.modern-story-top-wrap.dark-story-top-wrap,
+.modern-fake-story-top.dark-fake-story-top {
     background-color: hsl(240, 20%, 14%);
     border-top: 1px solid hsl(240, 16%, 27%);
     border-bottom: 1px solid hsl(240, 16%, 27%);
@@ -243,7 +244,7 @@ two classes are active together: */
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p {
-    background: hsl(240, 14%, 22%);
+    background: hsl(240, 18%, 13.5%);
 }
 
 .modern-story-bottom-wrap.dark-story-bottom-wrap p:last-child {

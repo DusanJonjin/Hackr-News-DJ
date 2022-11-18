@@ -5,11 +5,11 @@ import { CommentBmarkDetails } from '../Bookmarks/CommentBmarkDetails';
 
 export function ItemDetails({ item, fromBookmark, bMarkedItemArr }) {
 
-    if (item.type === 'comment') return <CommentBmarkDetails commentItem={item} bMarkedItemArr={bMarkedItemArr} />;
-
     return (
         fromBookmark 
-            ? <StoryBmarkDetails storyItem={item} bMarkedItemArr={bMarkedItemArr} />
+            ? item.type === 'comment' 
+                ? <CommentBmarkDetails commentItem={item} bMarkedItemArr={bMarkedItemArr} />
+                : <StoryBmarkDetails storyItem={item} bMarkedItemArr={bMarkedItemArr} />
             : <StoryDetails storyItem={item} />  
     );
 }
