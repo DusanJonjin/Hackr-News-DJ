@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Header } from './Header/Header';
 import { Stories } from './Stories/Stories';
 import { Comments } from './Comments/Comments';
@@ -9,18 +9,32 @@ import { pathsAndApis } from '../Utilities/variousData';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { themedClass } from '../Utilities/helperFunctions';
 import { useScrollToTop } from '../Hooks/ScrollToTop';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setThemeFromLocal } from '../Store/actions';
 import '../Styles/HackerNewsApp.css';
 
 export function HackerNewsApp() {
 
-    const { dark } = useSelector(state => state.theme);
+    const theme = useSelector(state => state.theme);
+
+    const dispatch = useDispatch();
 
     useScrollToTop();
 
+    useLayoutEffect(() => {
+        const localThemeString = localStorage.getItem('theme');
+        if (localThemeString) {
+            const localThemeObj = JSON.parse(localThemeString);
+            dispatch(setThemeFromLocal(localThemeObj));
+        } else {
+            const themeString = JSON.stringify(theme);
+            localStorage.setItem('theme', themeString);
+        }
+    }, [])
+
     return (
-        <div className={themedClass('app-wrapper', dark)}>
-            <Header />
+        <div className={themedClass('app-wrapper', theme.dark)}>
+            <Header theme={theme} />
             <main>
                 <Routes>
                    <Route path='/' element={<Navigate replace to='/top' />} />
@@ -38,7 +52,7 @@ export function HackerNewsApp() {
                     <Route path='*' element={<NoUrl />} />
                 </Routes>
             </main>
-            <footer className={themedClass('app-footer', dark)}>
+            <footer className={themedClass('app-footer', theme.dark)}>
                 © {new Date().getFullYear()}. Hackr News App by D.J.
             </footer>      
         </div>

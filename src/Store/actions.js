@@ -1,4 +1,10 @@
-// THEMES
+// THEME
+export const setThemeFromLocal = themeObj => {
+    return {
+        type: 'SET_THEME_FROM_LOCAL',
+        payload: themeObj
+    }
+}
 export const toggleDarkTheme = () => {
     return {
         type: 'TOGGLE_DARK_THEME'

@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Navbar } from './Navbar';
 import { ThemesBar } from './ThemesBar';
-import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { themedClass } from '../../Utilities/helperFunctions';
 import { pathsAndApis } from '../../Utilities/variousData';
 import { Link } from 'react-router-dom';
 import '../../Styles/Header/Header.css';
 
-export function Header() {
+export function Header({ theme }) {
 
     const { pathname } = useLocation();
 
-    const { dark, modern } = useSelector(state => state.theme);
+    const { dark, modern } = theme;
 
     const [navMenu, setNavMenu] = useState(false);
 

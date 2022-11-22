@@ -21,14 +21,19 @@ export function BookmarksAll({ dark, modern }) {
     };
 
     useLayoutEffect(()=> {
-        clearLocal && localStorage.clear();
+        if (clearLocal) {
+            localStorage.clear();
+            const localTheme = JSON.stringify({ dark, modern });
+            localStorage.setItem('theme', localTheme);
+        }
     }, [clearLocal])
 
     useLayoutEffect(() => {
         setAllKeys(Object.keys(localStorage));
     }, [toggleReadLocal, clearLocal])
 
-    if (!allKeys.length) return <BookmarksEmpty />;
+    // theme key will always be present since we are setting it on App mount
+    if (allKeys.length < 2) return <BookmarksEmpty />;
 
     const keys = allKeys.reduce((acc, v) => {
         if (v.includes('story')) return {...acc, stories: [...acc.stories, v]};

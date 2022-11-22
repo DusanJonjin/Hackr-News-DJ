@@ -2,6 +2,9 @@ import { combineReducers } from 'redux';
 
 const themeReducer = (state={dark: false, modern: false}, action) => {
     switch (action.type) {
+        case 'SET_THEME_FROM_LOCAL': 
+            const localTheme = action.payload;
+            return localTheme;
         case 'TOGGLE_DARK_THEME': 
             const changedDarkTheme = {...state, dark: !state.dark};
             return changedDarkTheme;
