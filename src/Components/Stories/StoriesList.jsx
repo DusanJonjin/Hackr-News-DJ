@@ -23,5 +23,5 @@ export function StoriesList({ storiesIDs, pageNum, storiesPerPage }) {
                 </li>
             )}
         </ol>
-    )
+    );
 }

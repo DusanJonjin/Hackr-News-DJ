@@ -16,5 +16,5 @@ export function StoriesStoryComments() {
                 modern={modern} 
             />
         </>
-    )
+    );
 }

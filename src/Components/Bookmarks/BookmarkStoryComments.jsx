@@ -26,5 +26,5 @@ export function BookmarkStoryComments() {
                 modern={modern}
             />
         </>
-    )
+    );
 }

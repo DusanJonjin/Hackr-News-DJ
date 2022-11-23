@@ -9,5 +9,5 @@ export function FakeComment() {
 
     return (
         <div className={themedClass('fake-comment', dark, modern)}> </div>
-    )
+    );
 }

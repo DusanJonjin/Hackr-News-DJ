@@ -75,5 +75,5 @@ export function Story({ storyID, storyNum, dark, modern }) {
                     </Link>                   
                 </div>      
             </article>
-    )
+    );
 }

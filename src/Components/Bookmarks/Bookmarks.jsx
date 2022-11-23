@@ -19,5 +19,5 @@ export function Bookmarks() {
                 <Route path='*' element={<NoUrl />} />
             </Routes>
         </section>
-    )
+    );
 }

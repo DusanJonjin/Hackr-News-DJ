@@ -10,5 +10,5 @@ export function FakeStory({ dark, modern }) {
             <div className={themedClass('fake-story-top', dark, modern)}></div>
             <div className={themedClass('fake-story-bottom', dark, modern)}></div>
         </article>
-    )
+    );
 }

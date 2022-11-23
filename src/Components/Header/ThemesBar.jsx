@@ -55,5 +55,5 @@ export function ThemesBar({ hambMenu, closeHambMenu, dark, modern }) {
             >               
             </div>
         </div>
-    )
+    );
 }

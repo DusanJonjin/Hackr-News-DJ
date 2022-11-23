@@ -51,5 +51,5 @@ export function StoryCommentOptions(props) {
             }
             
         </div>
-    )
+    );
 }

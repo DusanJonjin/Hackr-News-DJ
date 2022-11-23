@@ -107,5 +107,5 @@ export function StoryComment({ storyId, commentID, goToComment }) {
             }
             </article>
         :   <FakeComment />
-    )
+    );
 }

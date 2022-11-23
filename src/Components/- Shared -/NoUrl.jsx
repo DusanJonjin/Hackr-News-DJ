@@ -9,5 +9,5 @@ export function NoUrl() {
 
     return (
         <h2 className={themedClass('invalid-url', dark)}>Invalid URL!</h2>
-    )
+    );
 }

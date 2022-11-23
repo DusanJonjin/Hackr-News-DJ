@@ -16,7 +16,7 @@ const themeReducer = (state={dark: false, modern: false}, action) => {
             return classicThemeSelected;
         default: return state;
     }
-}
+};
 
 const scrolledCommentIDReducer = (state=0, action) => {
     switch (action.type) {
@@ -25,7 +25,7 @@ const scrolledCommentIDReducer = (state=0, action) => {
             return id;
         default: return state;
     }
-}
+};
 
 const commentsReducer = (state=[], action) => {
     switch (action.type) {
@@ -55,7 +55,7 @@ const commentsReducer = (state=[], action) => {
             }
         default: return state;
     }
-}
+};
 
 const collapsedCommentsReducer = (state=[], action) => {
     switch (action.type) {
@@ -77,7 +77,7 @@ const collapsedCommentsReducer = (state=[], action) => {
             return clearAllCollapsed;
         default: return state;
     }
-}
+};
 
 const searchValueReducer = (state='', action) => {
     switch (action.type) {
@@ -89,7 +89,7 @@ const searchValueReducer = (state='', action) => {
             return clearState;
         default: return state;
     }
-}
+};
 
 export const reducers = combineReducers(
     {

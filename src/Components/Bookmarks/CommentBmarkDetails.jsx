@@ -22,5 +22,5 @@ export function CommentBmarkDetails({ commentItem, bMarkedItemArr }) {
             <TimeAgo time={time} />
             <p>on: <strong>{storyTitle}</strong></p>
         </div>
-    )
+    );
 }

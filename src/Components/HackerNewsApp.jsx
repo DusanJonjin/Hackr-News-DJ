@@ -30,7 +30,7 @@ export function HackerNewsApp() {
             const themeString = JSON.stringify(theme);
             localStorage.setItem('theme', themeString);
         }
-    }, [])
+    }, []);
 
     return (
         <div className={themedClass('app-wrapper', theme.dark)}>
@@ -56,5 +56,5 @@ export function HackerNewsApp() {
                 © {new Date().getFullYear()}. Hackr News App by D.J.
             </footer>      
         </div>
-    )
+    );
 }

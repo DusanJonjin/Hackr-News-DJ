@@ -20,20 +20,20 @@ export function Header({ theme }) {
     const toggleNavMenu = () => {
         setNavMenu(prevNavMenu => !prevNavMenu);
         setHambMenu(false);
-    }
+    };
 
     const closeNavMenu = () => {
         setNavMenu(false);
-    }
+    };
 
     const toggleHambMenu = () => {
         setHambMenu(prevHambMenu => !prevHambMenu);
         setNavMenu(false);
-    }
+    };
 
     const closeHambMenu = () => {
         setHambMenu(false);
-    }
+    };
 
     const currentPage = pathsAndApis.reduce((acc, { path }) => 
         pathname.includes(path) ? path.slice(1, path.length) : acc, ''
@@ -74,5 +74,5 @@ export function Header({ theme }) {
                 <div className={`${themedClass('hamburger', dark)} ${hambMenu ? 'hamb-open' : ''}`}></div>
             </div>
         </header>
-    )
+    );
 }
