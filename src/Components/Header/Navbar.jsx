@@ -3,26 +3,15 @@ import { Link } from 'react-router-dom';
 import { themedClass } from '../../Utilities/helperFunctions';
 import '../../Styles/Header/Navbar.css';
 
-export function Navbar(props) {
-
-    const {
-        navMenu,
-        closeNavMenu,
-        dark,
-        pathname,
-        pathsAndApis
-    } = props
+export function Navbar({ dark, pathname, pathsAndApis }) {
 
     return (
-        <nav 
-            className={`${themedClass('navbar', dark)} ${navMenu ? 'navbar-open' : ''}`}
-        >
+        <nav className={themedClass('navbar', dark)}>
             <ul>
             {pathsAndApis.map(({ path }, i) => !path.includes('user') &&
                 <li 
                     key={i}
                     className={`${themedClass('nav-li', dark)} ${pathname.includes(path) ? 'selected-nav-li' : ''}`} 
-                    onClick={() => closeNavMenu()}
                 >
                     <Link 
                         to={path}

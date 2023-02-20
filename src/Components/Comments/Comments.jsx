@@ -9,6 +9,12 @@ import { useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router';
 import '../../Styles/Comments/Comments.css';
 
+const initialItemsObj = {
+    status: 'isLoading',
+    maxItemID: 0,
+    ids: [],
+};
+
 export function Comments() {
 
     const { dark, modern } = useSelector(state => state.theme);
@@ -19,13 +25,6 @@ export function Comments() {
 
     // eslint-disable-next-line no-unused-vars
     const [itemsIdCount, setItemsIdCount] = useState(20);
-
-    const initialItemsObj = {
-        status: 'isLoading',
-        maxItemID: 0,
-        ids: []
-    };
-
     const [itemsObj, setItemsObj] = useState(initialItemsObj);
 
     const initializeMaxItemWithIds = (pageNum, maxItem) => {

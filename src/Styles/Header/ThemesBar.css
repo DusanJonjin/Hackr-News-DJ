@@ -10,8 +10,8 @@
     right: 0;
     white-space: nowrap;
     overflow: hidden;
-    transform: translate3d(0, -100%, -1px);
-    transition: .2s ease;
+    transform: translate3d(0, -200%, -1px);
+    transition: .3s ease;
     z-index: -2;
 }
 
@@ -21,7 +21,6 @@
 
 .theme-sel-open {
     transform: translate3d(0, 0, -1px);
-    transition: .3s ease;
 }
 
 .theme-selection-wrap > .btn {
@@ -45,8 +44,7 @@
 }
 
 .theme-selection-wrap > .btn-selected {
-    color: hsl(22, 100%, 97%);
-    font-weight: 400;
+    color: hsl(22, 100%, 98%);
     background-color: transparent;
     text-decoration: underline;
     pointer-events: none;

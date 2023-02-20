@@ -22,7 +22,7 @@
 
 .modern-story.dark-story {
     border: 1px solid hsl(240, 21%, 14%);
-    background: hsl(240, 20%, 18%);
+    background: hsl(240, 19%, 17.5%);
 }
 
 .story-num {
@@ -41,7 +41,7 @@
     color: hsl(222, 7%, 50%);
     text-align: left;
     margin: 0 5px 0 0;
-    padding: 3px 0 5px 0;
+    padding: 5px 0;
     transition: var(--main-transition);
 }
 
@@ -74,7 +74,7 @@
 two classes are active together: */
 .modern-story-top-wrap.dark-story-top-wrap,
 .modern-fake-story-top.dark-fake-story-top {
-    background-color: hsl(240, 20%, 14%);
+    background-color: hsl(240, 20%, 13%);
     border-top: 1px solid hsl(240, 16%, 27%);
     border-bottom: 1px solid hsl(240, 16%, 27%);
 }
@@ -94,7 +94,7 @@ two classes are active together: */
 
 .title-link {
    text-decoration: none;
-   color: hsl(229, 14%, 30%);
+   color: hsl(228, 22%, 30%);
    transition: var(--main-transition);
 }
 
@@ -103,7 +103,7 @@ two classes are active together: */
 }
 
 .dark-title-link {
-    color: hsl(212, 74%, 81%);
+    color: hsl(212, 74%, 80%);
 }
 
 .dark-title-link:hover {
@@ -304,6 +304,7 @@ two classes are active together: */
 
     .modern-story-num {
         font-size: 15px;
+        padding: 3px 0 5px 0;
         margin: 0 5px 0 0;
     }
 

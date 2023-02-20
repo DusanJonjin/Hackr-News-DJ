@@ -10,19 +10,21 @@ import { usePreventSetStateOnUnmount } from '../../Hooks/PreventSetStateOnUnmoun
 import { Routes, Route, useLocation } from 'react-router';
 import '../../Styles/Stories/Stories.css';
 
+const initialStoriesObj = {
+    status: 'isLoading',
+    ids: [],
+    count: 0,
+};
+
 export function Stories({ storiesApiName }) {
 
     const { pathname } = useLocation();
 
     const pageNum = !pathname.includes('page') ? 1 : parseInt(pathname.slice(pathname.indexOf('_') + 1));
 
-    const initialStoriesObj = {status: 'isLoading', ids: [], count: 0};
-
     const [storiesObj, setStoriesObj] = useState(initialStoriesObj);
-
     // eslint-disable-next-line no-unused-vars
     const [storiesPerPage, setStoriesPerPage] = useState(30);
-
     const [paginateMidBtns, setPaginateMidBtns] = useState([]);
 
     const handleMidBtns = array => {
