@@ -74,7 +74,7 @@
 }
 
 .nav-link:hover{
-    color: hsl(55, 87%, 92%);
+    color: hsl(22, 100%, 92%);
 }
 
 .dark-nav-link {
@@ -103,6 +103,6 @@
     }
 
     .nav-link:hover{
-        color: hsl(22, 100%, 92%)
+        color: hsl(55, 87%, 92%);
     }
 }
