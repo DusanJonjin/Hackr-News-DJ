@@ -101,4 +101,8 @@
     .nav-link > img {
         margin-left: 4px;
     }
+
+    .nav-link:hover{
+        color: hsl(22, 100%, 92%)
+    }
 }
